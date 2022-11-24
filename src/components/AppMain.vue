@@ -1,17 +1,21 @@
 <script>
 import FeatureSection from './FeatureSection.vue';
 import ServicesSection from './ServicesSection.vue';
-import {features, services, outWork, plans, news, clients, callToAction} from '../data/main-components';
+import OurWorkSection from './OurWorkSection.vue';
+import {features, services, ourWork, plans, news, clients, callToAction} from '../data/main-components';
 export default {
   name: 'AppMain',
   components: {
     FeatureSection,
-    ServicesSection
+    ServicesSection,
+    OurWorkSection
+
   },
   data() {
     return {
       features,
-      services
+      services,
+      ourWork
     }
   }
 
@@ -21,6 +25,7 @@ export default {
   <main>
     <FeatureSection :features="features" />
     <ServicesSection :services="services" />
+    <OurWorkSection :ourWork="ourWork" />
   </main>
   
 </template>

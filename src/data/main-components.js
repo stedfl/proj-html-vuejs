@@ -82,10 +82,10 @@ const services = {
     ]
 };
 
-const outWork = {
+const ourWork = {
     title: 'our work',
     text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
-    images: [
+    cards: [
       'case-study-gallery-3-1',
       'case-study-gallery-2',
       'case-study-gallery-1-1',
@@ -223,4 +223,4 @@ const callToAction = {
   image: 'CTA-seo-1'
 }
 
-export {hero, features, services, outWork, plans, news, clients, callToAction};
+export {hero, features, services, ourWork, plans, news, clients, callToAction};

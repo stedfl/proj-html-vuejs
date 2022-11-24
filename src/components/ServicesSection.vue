@@ -20,7 +20,7 @@ export default {
   <div class="main-wrap">
     <div class="container-seo">
       <TitleArea :title="services.title" :text="services.text"/>
-      <div class="row row-3">
+      <div class="row">
         <div v-for="(card, index) in services.cards" :key="index" class="col">
           <div  class="card text-center">
             <div class="top">
@@ -34,8 +34,6 @@ export default {
     </div>
   </div>
 </template>
-
-
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;

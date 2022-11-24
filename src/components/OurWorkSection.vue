@@ -2,12 +2,12 @@
 import {store} from '../data/store'
 import TitleArea from './TitleArea.vue';
 export default {
-  name: 'FeatureSection',
+  name: 'OurWorkSection',
   components: {
     TitleArea
   },
   props: {
-    features: Object
+    ourWork: Object
   },
   data() {
     return {
@@ -19,39 +19,31 @@ export default {
 <template>
   <div class="main-wrap">
     <div class="container-seo">
-      <TitleArea :title="features.title" :text="features.text"/>
+      <TitleArea :title="ourWork.title" :text="ourWork.text"/>
       <div class="row">
-        <div v-for="(card, index) in features.cards" :key="index" class="col">
+        <div v-for="(card, index) in ourWork.cards" :key="index" class="col">
           <div  class="card text-center">
-            <div class="top">
-              <i class="fa-solid icon" :class="card.icon"></i>
-              <h3>{{card.title}}</h3>
-            </div>
-            <p>{{card.text}}</p>
+            <img :src="store.getPathImage(card, 'jpg')" alt="">
           </div>
         </div>
       </div>
-      <img :src="store.getPathImage(features.image.path, 'jpg')" :alt="features.image.name">
     </div>
   </div>
 </template>
-
-
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 
 .main-wrap {
   background-color: $primary-bg;
+  background-image: url(../assets/img/pattern_background.png);
   padding-top: 2rem;
+  padding-bottom: 11.2rem;
 }
-.card {
-  padding: 35px;
-  border: transparent;
+
   h3 {
     margin-bottom: 1rem;
   }
-}
 
 
 img {
