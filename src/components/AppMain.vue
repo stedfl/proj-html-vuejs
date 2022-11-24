@@ -1,11 +1,23 @@
 <script>
+import FeatureSection from './FeatureSection.vue';
+import {features, services, outWork, plans, news, clients, callToAction} from '../data/main-components';
 export default {
-  name: 'AppMain'
+  name: 'AppMain',
+  components: {
+    FeatureSection
+  },
+  data() {
+    return {
+      features
+    }
+  }
 
 }
 </script>
 <template>
-  <main>M</main>
+  <main>
+    <FeatureSection :features="features" />
+  </main>
   
 </template>
 
