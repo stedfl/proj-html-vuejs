@@ -2,6 +2,8 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+import {menu, credits} from './data/menu.js';
+// import {store} from './data/store';
 
 export default {
   name: 'App',
@@ -9,14 +11,19 @@ export default {
     AppHeader,
     AppMain,
     AppFooter
-
+  },
+  data() {
+    return {
+      menu,
+      // store
+    }
   }
 
 }
 </script>
 
 <template>
-  <AppHeader/>
+  <AppHeader :menu="menu"/>
   <AppMain/>
   <AppFooter/>
   
