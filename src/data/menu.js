@@ -1,9 +1,9 @@
 const menu = [
   'home',
-  'who we are',
-  'what we do',
-  'where we work',
-  'careers',
+  'Who we are',
+  'What we do',
+  'Where we work',
+  'Careers',
   'apply',
   'news'
 ];
