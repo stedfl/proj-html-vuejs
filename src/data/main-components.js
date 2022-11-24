@@ -30,7 +30,7 @@ const hero = {
   };
 
 const features = {
-    title: 'Meet the new agency CEO template from the avada team',
+    title: 'Meet the new agency SEO template from the avada team',
     text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium',
     cards: [
       {

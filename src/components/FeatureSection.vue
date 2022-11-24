@@ -12,8 +12,10 @@ export default {
 </script>
 <template>
   <div class="main-wrap">
-    <div class="container-hero">
+    <div class="container-seo">
       <TitleArea :title="features.title" :text="features.text"/>
+
+      
 
     </div>
   </div>
@@ -28,7 +30,7 @@ export default {
 
 .main-wrap {
   background-color: $primary-bg;
-  min-height: 300px;
+  padding: 2rem 0;
 }
 
 </style>

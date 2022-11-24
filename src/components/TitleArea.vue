@@ -8,6 +8,10 @@ export default {
 }
 </script>
 <template>
+  <div class="title-section">
+    <h2>{{title}}</h2>
+    <p class="p2">{{text}}</p>
+  </div>
 
 
   
@@ -18,5 +22,20 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 
+.title-section {
+  text-align: center;
+  padding: 5rem 3rem;
+  width: 55%;
+  margin: 0 auto;
+  h2 {
+    font-weight: 800;
+    text-transform: capitalize;
+    line-height: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    line-height: 2.7rem;
+  }
+}
 
 </style>
