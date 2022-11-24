@@ -2,12 +2,12 @@
 import {store} from '../data/store'
 import TitleArea from './TitleArea.vue';
 export default {
-  name: 'FeatureSection',
+  name: 'ServicesSection',
   components: {
     TitleArea
   },
   props: {
-    features: Object
+    services: Object
   },
   data() {
     return {
@@ -19,19 +19,18 @@ export default {
 <template>
   <div class="main-wrap">
     <div class="container-seo">
-      <TitleArea :title="features.title" :text="features.text"/>
+      <TitleArea :title="services.title" :text="services.text"/>
       <div class="row row-3">
-        <div v-for="(card, index) in features.cards" :key="index" class="col">
+        <div v-for="(card, index) in services.cards" :key="index" class="col">
           <div  class="card text-center">
             <div class="top">
-              <i class="fa-solid icon" :class="card.icon"></i>
+              <i :class="['icon', card.icon, (card.icon === 'fa-google' ? 'fa-brands' : 'fa-solid')]"></i>
               <h3>{{card.title}}</h3>
             </div>
             <p>{{card.text}}</p>
           </div>
         </div>
       </div>
-      <img :src="store.getPathImage(features.image.path, 'jpg')" :alt="features.image.name">
     </div>
   </div>
 </template>
@@ -42,17 +41,20 @@ export default {
 @use '../styles/partials/variables' as *;
 
 .main-wrap {
-  background-color: $primary-bg;
+  color: white;
+  background-color: $secondary-bg;
+  background-image: url(../assets/img/pattern_background.png);
   padding-top: 2rem;
+  padding-bottom: 11.2rem;
 }
 .card {
+  background-color: lighten($secondary-bg, 3%);
   padding: 35px;
   border: transparent;
   h3 {
     margin-bottom: 1rem;
   }
 }
-
 
 img {
   margin-top: 2rem;

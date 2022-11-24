@@ -1,10 +1,6 @@
 const hero = {
     title: 'SEM campaigns made simple with avada',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu ornare erat. Curabitur pulvinar elit',
-    button: [
-      'buy avada now',
-      'contact us'
-    ],
     images: {
       mainImage: [
         {
@@ -41,18 +37,18 @@ const features = {
       {
         icon: 'fa-video',
         title: 'work with a team',
-        text: 'Cras semper auctor aliquam. Sed porta sed lacus sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisce.i'
+        text: 'Cras semper auctor aliquam. Sed porta sed lacus sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisce.'
       },
       {
         icon: 'fa-droplet',
         title: 'get results',
         text: 'Vestibulum scelerisque egestas lectus sit amet molestie. Donec consectetur cursus est sed blandit. Nunc sed risus lacus.',
-        image: {
-          name: 'Agency Seo desk',
-          path: ''
-        }
       }
-    ]
+    ],
+    image: {
+      name: 'Agency Seo desk',
+      path: 'agency-seo-desk-front-1200x570'
+    }
   };
 
 const services = {

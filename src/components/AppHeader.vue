@@ -1,8 +1,8 @@
 <script>
-// import {store} from '../data/store';
 import Navbar from "./NavBar.vue";
 import { menu } from "../data/menu";
 import { hero } from "../data/main-components";
+// import {getPathImage} from "../data/functions";
 export default {
   name: "AppHeader",
   components: {
@@ -10,15 +10,10 @@ export default {
   },
   data() {
     return {
-      // store,
       menu,
       hero,
+      // getPathImage
     };
-  },
-  methods: {
-    getPathImage(imageName) {
-      return new URL(`../assets/img/${imageName}.png`, import.meta.url).href;
-    },
   },
 };
 </script>
@@ -73,10 +68,6 @@ header {
   height: calc(100% - 60px);
   width: 50%;
   color: white;
-  padding-right: 2rem;
-  h1 {
-    text-transform: capitalize;
-  }
   .btn-seo {
     margin-right: 1.5rem;
   }
@@ -89,7 +80,7 @@ header {
   }
 }
 p {
-  padding-right: 3rem;
+  padding-right: 4rem;
   margin: 1.5rem 0;
 }
 </style>
