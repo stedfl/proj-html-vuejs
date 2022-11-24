@@ -27,30 +27,45 @@ export default {
 <template>
  
 <div class="main-wrap">
-  <div class="container">
-    <header class="d-flex justify-content-between align-items-center py-4">
+  <div class="container-seo h-100 pt-4">
+    <header class="d-flex justify-content-between align-items-center">
       <div class="logo">
         <img src="/logo/logo_seo_w_1x.png" alt="logo">
       </div>
       <div class="right d-flex">
         <Navbar :menu="menu" />
-        <button class="btn-seo header">get in touch now</button>
+        <button class="btn-seo">get in touch now</button>
       </div>
     </header>
-    <div class="hero">
-      <h1>{{}}</h1>
-      <p></p>
+    <div class="hero d-flex align-items-center">
+      <div class="content">
+        <h1>{{this.hero.title}}</h1>
+        <p class="p1">{{this.hero.text}}</p>
+        <div class="buttons">
+          <button class="btn-seo">buy avada now</button>
+          <button class="btn-seo contact">contact us</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-  
-  
 </template>
 
 
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
+
+header {
+  height: 60px;
+  .btn-seo {
+  margin-left: 3rem;
+  margin-right: 5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+
+}
+}
 
 .main-wrap {
   background-image: url(../assets/img/1-hero-image.png);
@@ -60,10 +75,28 @@ export default {
   width: 100%;
 }
 
-.btn-seo.header {
-  margin-left: 3rem;
-  margin-right: 5rem;
-  font-size: 0.8rem;
-}
+.hero {
+  height: calc(100% - 60px);
+  width: 50%;
+  color: white;
+  padding-right: 2rem;
+  h1 {
+    text-transform: capitalize;
+  }
+  .btn-seo {
+    margin-right: 1.5rem;
+  }
 
+  .btn-seo.contact {
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color;
+    &:hover {
+    background-color: lighten($secondary-color, 5%);
+  }
+  }
+}
+p {
+  padding-right: 3rem;
+  margin: 1.5rem 0;
+}
 </style>

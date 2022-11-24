@@ -58,6 +58,9 @@ a {
   color: white;
   font-weight: 500;
   text-transform: capitalize;
+  &:hover {
+    color: $primary-color;
+  }
 }
 .apply {
 }

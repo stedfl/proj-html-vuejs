@@ -1,6 +1,6 @@
 const hero = {
-    title: 'sem campaigns made simple with avada',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu ornare erat',
+    title: 'SEM campaigns made simple with avada',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu ornare erat. Curabitur pulvinar elit',
     button: [
       'buy avada now',
       'contact us'
