@@ -240,7 +240,6 @@ const callToAction = {
   title: 'start your free consultation',
   text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium',
   button: 'contact us now',
-  image: 'CTA-seo-1'
 }
 
 export {hero, features, services, ourWork, plans, news, clients, callToAction};
