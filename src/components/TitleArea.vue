@@ -3,12 +3,13 @@ export default {
   name: 'TitleArea',
   props: {
     title: String,
-    text: String
+    text: String,
+    textColor: String
   }
 }
 </script>
 <template>
-  <div class="title-section">
+  <div :class="textColor" class="title-section text">
     <h2>{{title}}</h2>
     <p class="p2">{{text}}</p>
   </div>

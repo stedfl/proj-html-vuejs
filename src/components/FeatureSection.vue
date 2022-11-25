@@ -19,7 +19,7 @@ export default {
 <template>
   <div class="main-wrap">
     <div class="container-seo">
-      <TitleArea :title="section.title" :text="section.text"/>
+      <TitleArea :title="section.title" :text="section.text" :textColor="'black'"/>
       <div class="row">
         <div v-for="(card, index) in section.cards" :key="index" class="col">
           <div  class="card text-center">

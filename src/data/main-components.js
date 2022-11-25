@@ -147,7 +147,6 @@ const plans = {
           'unlimited users'
         ],
         button: 'start today',
-        image: 'background1'
       },
     ]
 };
