@@ -11,8 +11,8 @@ export default {
     return {
       menu,
       hero,
-    };
-  },
+    }
+  }
 };
 </script>
 <template>

@@ -13,12 +13,18 @@ export default {
     <ul class="seo d-flex align-items-center">
       <li v-for="(item, index) in menu" :key="index">
         <a
-          v-if="(isApply && item ==='apply') || (isAllOthers && item !== 'apply' && item !== 'get in touch' ) || (!isApply && item === 'get in touch')"
-          :class="[item === 'apply' ? 'apply' : 'others']"
+          v-if="
+            (isApply && item.placeholder === 'apply') ||
+            (isAllOthers &&
+              item.placeholder !== 'apply' &&
+              item.placeholder !== 'get in touch') ||
+            (!isApply && item.placeholder === 'get in touch')
+          "
+          :class="[item.placeholder === 'apply' ? 'apply' : 'others']"
           class="menu-items text"
-          href="#"
-          >{{ item }}
-        </a >
+          :href="item.link"
+          >{{ item.placeholder }}
+        </a>
       </li>
     </ul>
   </nav>
@@ -62,5 +68,4 @@ a {
     color: $primary-color;
   }
 }
-
 </style>

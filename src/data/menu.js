@@ -1,12 +1,32 @@
 const menu = [
-  'home',
-  'Who we are',
-  'What we do',
-  'Where we work',
-  'Careers',
-  'apply',
-  'news',
-  'get in touch'
+  {
+    placeholder: 'home',
+    link: '#'
+  },
+  {
+    placeholder: 'Who we are',
+    link: '#'
+  },
+  {
+    placeholder: 'What we do',
+    link: '#'
+  },
+  {
+    placeholder: 'Careers',
+    link: '#'
+  },
+  {
+    placeholder: 'apply',
+    link: '#'
+  },
+  {
+    placeholder: 'news',
+    link: '#'
+  },
+  {
+    placeholder: 'get in touch',
+    link: '#'
+  }
 ];
 
 const credits = {
@@ -40,30 +60,30 @@ const credits = {
         link: '#'
       }
     }
-  ],
-
-  social: [
-    {
-      icon: 'fa-facebook-f',
-      description: 'facebook'
-    },
-    {
-      icon: 'fa-instagram',
-      description: 'instagram'
-    },
-    {
-      icon: 'fa-twitter',
-      description: 'twitter'
-    },
-    {
-      icon: 'fa-youtube',
-      description: 'YouTube'
-    },
-    {
-      icon: 'fa-linkedin-in',
-      description: 'linkedin'
-    },
   ]
-}
+};
 
-export {menu, credits};
+const social = [
+  {
+    icon: 'fa-facebook-f',
+    placeholder: 'facebook',
+    link: '#'
+  },
+  {
+    icon: 'fa-instagram',
+    placeholder: 'instagram',
+    link: '#'
+  },
+  {
+    icon: 'fa-twitter',
+    placeholder: 'twitter',
+    link: '#'
+  },
+  {
+    icon: 'fa-youtube',
+    placeholder: 'YouTube',
+    link: '#'
+  }
+] 
+
+export {menu, credits, social};

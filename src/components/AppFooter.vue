@@ -1,6 +1,6 @@
 <script>
 import Navbar from "./NavBar.vue";
-import { menu, credits } from "../data/menu";
+import { menu, credits, social } from "../data/menu";
 export default {
   name: "AppFooter",
   components: {
@@ -10,6 +10,7 @@ export default {
     return {
       menu,
       credits,
+      social
     };
   },
   computed: {
@@ -32,7 +33,7 @@ export default {
     >
       <img src="/logo/logo_seo_1x.png" alt="logo" />
       <Navbar :menu="menu" :isApply="false" :isAllOthers="true" />
-      <ul class="d-flex">
+      <ul class="d-flex credits">
         <li
           v-for="(item, index) in credits.info"
           :key="index"
@@ -40,11 +41,20 @@ export default {
             'border-item': index === 0 || index === credits.info.length - 1,
           }"
         >
-        <i :class="item.icon" class="fa-solid"></i>
+          <i :class="item.icon" class="fa-regular icon-copyright"></i>
           <span>{{ item.text }}</span>
           <a :href="item.link.link">{{ item.link.placeholder }}</a>
         </li>
       </ul>
+      <div class="social">
+        <ul class="d-flex">
+          <li v-for="(item, index) in social" :key="index">
+            <a :href="item.link">
+              <i :class="item.icon" class="fa-brands icon-social"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </footer>
 </template>
@@ -59,23 +69,46 @@ footer {
   }
 }
 .container-seo {
-  padding: 3rem 0;
+  padding: 3rem 0 2.5rem;
   flex-direction: column;
 }
 
-ul {
+ul.credits {
   margin-top: 2.8rem;
-}
-
-li {
-  padding: 0 0.7rem;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+  li {
+  padding: 0 0.5rem;
+  border-right: 1px solid $grey-color;
+  border-left: 1px solid $grey-color;
   text-transform: capitalize;
   font-size: 0.8rem;
+  margin-right: -1px;
+  color: $grey-color;
+  }
+  
 }
+
+a {
+    color: black;
+  }
+
 .border-item {
   border-left: 0;
   border-right: 0;
 }
+
+.social ul {
+  margin-top: 1.2rem;
+}
+.icon-copyright {
+  margin-right: 0.3rem;
+}
+
+.icon-social {
+  margin: 0 0.7rem;
+  font-size: 1.2rem;
+  &:hover {
+    color: $grey-color
+  }
+}
+
 </style>
