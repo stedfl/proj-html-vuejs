@@ -20,7 +20,7 @@ export default {
 
 .title-section {
   text-align: center;
-  padding: 5rem 3rem;
+  padding: 5rem 3rem 4rem;
   width: 60%;
   margin: 0 auto;
   h2 {

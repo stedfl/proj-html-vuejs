@@ -25,7 +25,7 @@ export default {
           <div  class="card text-center">
             <div class="top">
               <i class="fa-solid icon" :class="card.icon"></i>
-              <h3>{{card.title}}</h3>
+              <h4>{{card.title}}</h4>
             </div>
             <p>{{card.text}}</p>
           </div>
@@ -47,11 +47,7 @@ export default {
 .card {
   padding: 35px;
   border: transparent;
-  h3 {
-    margin-bottom: 1rem;
-  }
 }
-
 
 img {
   margin-top: 2rem;

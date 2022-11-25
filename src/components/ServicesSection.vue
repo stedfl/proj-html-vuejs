@@ -25,7 +25,7 @@ export default {
           <div  class="card text-center">
             <div class="top">
               <i :class="['icon', card.icon, (card.icon === 'fa-google' ? 'fa-brands' : 'fa-solid')]"></i>
-              <h3>{{card.title}}</h3>
+              <h4>{{card.title}}</h4>
             </div>
             <p>{{card.text}}</p>
           </div>
@@ -48,9 +48,6 @@ export default {
   background-color: lighten($secondary-bg, 3%);
   padding: 35px;
   border: transparent;
-  h3 {
-    margin-bottom: 1rem;
-  }
 }
 
 img {

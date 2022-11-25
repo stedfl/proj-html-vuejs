@@ -12,7 +12,8 @@ ul {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   text-transform: capitalize;
 }
 
@@ -27,8 +28,13 @@ h2 {
 }
 
 h3 {
+
+}
+
+h4 {
   font-size: 1.6rem;
   font-weight: 800;
+  margin-bottom: 1rem;
 }
 
 a {
@@ -72,6 +78,10 @@ p.p2 {
 
 .text.black {
   color: black;
+}
+
+.row {
+  padding-top: 1rem;
 }
 
 .icon {

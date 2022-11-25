@@ -47,6 +47,7 @@ export default {
 
 .row {
   margin-bottom: 3.7rem;
+  padding-top: 0;
 }
 
 .card {
