@@ -1,5 +1,4 @@
 <script>
-// import {store} from '../data/store';
 export default {
   name: "NavBar",
   props: {
@@ -7,14 +6,8 @@ export default {
   },
   data() {
     return {
-      // store,
     };
-  },
-  methods: {
-    getPathImage(imageName) {
-      return new URL(`../assets/img/${imageName}.png`, import.meta.url).href;
-    },
-  },
+  }
 };
 </script>
 <template>

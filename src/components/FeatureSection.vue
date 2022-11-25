@@ -25,7 +25,7 @@ export default {
           <div  class="card text-center">
             <div class="top">
               <i class="fa-solid icon" :class="card.icon"></i>
-              <h4>{{card.title}}</h4>
+              <h3>{{card.title}}</h3>
             </div>
             <p>{{card.text}}</p>
           </div>

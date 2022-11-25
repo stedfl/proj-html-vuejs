@@ -26,7 +26,7 @@ export default {
         </div>
         <div class="right d-flex">
           <Navbar :menu="menu" />
-          <button class="btn-seo">get in touch now</button>
+          <button class="btn-seo default">get in touch now</button>
         </div>
       </header>
       <div class="hero d-flex align-items-center">
@@ -34,7 +34,7 @@ export default {
           <h1>{{ this.hero.title }}</h1>
           <p class="p1">{{ this.hero.text }}</p>
           <div class="buttons">
-            <button class="btn-seo">buy avada now</button>
+            <button class="btn-seo default">buy avada now</button>
             <button class="btn-seo contact">contact us</button>
           </div>
         </div>

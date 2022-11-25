@@ -32,7 +32,7 @@ export default {
           </div>
         </div>
       </div>
-      <button class="btn-seo">{{ section.button }}</button>
+      <button class="btn-seo default">{{ section.button }}</button>
     </div>
   </div>
 </template>

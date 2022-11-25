@@ -1,34 +1,58 @@
 <script>
-import {store} from '../data/store'
-import TitleArea from './TitleArea.vue';
+import { store } from "../data/store";
+import TitleArea from "./TitleArea.vue";
 export default {
-  name: 'PlansSection',
+  name: "PlansSection",
   components: {
-    TitleArea
+    TitleArea,
   },
   props: {
-    section: Object
+    section: Object,
   },
   data() {
     return {
-      store
-    }
-  }
-}
+      store,
+    };
+  },
+};
 </script>
 <template>
   <div class="main-wrap">
     <div class="container-seo">
-      <TitleArea :title="section.title" :text="section.text" :textColor="'white'"/>
+      <TitleArea
+        :title="section.title"
+        :text="section.text"
+        :textColor="'white'"
+      />
       <div class="row">
         <div v-for="(card, index) in section.cards" :key="index" class="col">
-          <div  class="card text-center rounded-0">
+          <div class="card text-center rounded-0">
             <div class="type">
-              <h3></h3>
+              <h3>{{ card.type }}</h3>
             </div>
-            <div class="price"></div>
-            <div class="info"></div>
-            <div class="button"></div>
+            <div class="price">
+              <span>$</span>
+              <span>{{ card.price }}</span>
+              <span>99</span>
+              <span>{{ card.frequency }}</span>
+            </div>
+            <div class="info">
+              <ul>
+                <li v-for="(item, index) in card.info" :key="index">
+                  {{ item }}
+                </li>
+              </ul>
+            </div>
+            <div class="button">
+              <button
+                :class="[
+                  'btn-seo',
+                  card.type === 'professional' ? 'default' : 'special',
+                ]"
+              >
+                {{ card.button }}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -36,10 +60,8 @@ export default {
   </div>
 </template>
 
-
-
 <style lang="scss" scoped>
-@use '../styles/partials/variables' as *;
+@use "../styles/partials/variables" as *;
 
 .main-wrap {
   background-image: url(../assets/img/background1.jpg);
@@ -62,4 +84,14 @@ img {
   margin-top: 2rem;
 }
 
+.btn-seo.special {
+  color: #5d5c5d;
+  background-color: transparent;
+  border: 2px solid #5d5c5d;
+}
+
+.btn-seo.special:hover {
+  color: $secondary-color;
+  border: 2px solid $secondary-color;
+}
 </style>
