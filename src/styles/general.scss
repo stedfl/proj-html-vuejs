@@ -110,3 +110,17 @@ p.p2 {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
+
+@media all and (max-width: 1524px ) {
+  .container-seo {
+    width: 80%;
+  }
+
+  @media all and (max-width: 1200px) {
+    .container-seo {
+      width: 80%;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}

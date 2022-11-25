@@ -98,6 +98,9 @@ a {
 
 .social ul {
   margin-top: 1.2rem;
+  a:hover {
+    color: $grey-color
+  }
 }
 .icon-copyright {
   margin-right: 0.3rem;
@@ -106,9 +109,19 @@ a {
 .icon-social {
   margin: 0 0.7rem;
   font-size: 1.2rem;
-  &:hover {
-    color: $grey-color
-  }
 }
+
+.box2 {
+  width: 300px;
+  margin: 50px auto;
+  border: 4px solid #00bfb6;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #00bfb6;
+  font-family: arial;
+  position: relative;
+}
+
 
 </style>
