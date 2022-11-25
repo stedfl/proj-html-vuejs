@@ -2,7 +2,7 @@
 import { store } from "../data/store";
 import TitleArea from "./TitleArea.vue";
 export default {
-  name: "OurWorkSection",
+  name: "NewsSection",
   components: {
     TitleArea,
   },
@@ -23,11 +23,15 @@ export default {
       <div class="row row-cols-3">
         <div v-for="(card, index) in section.cards" :key="index" class="col">
           <div class="card text-center">
-            <img :src="store.getPathImage(card, 'jpg')" :alt="card" />
-            <div class="link justify-content-center align-items-center">
-              <a :href="section.hover.link">
-                <i class="fa-solid icon" :class="section.hover.icon"></i>
+            <div class="image-container">
+              <img :src="store.getPathImage(card.image, 'jpg')" :alt="card" />
+            </div>
+            <div class="text-area">
+              <a :href="card.link">
+                <h5>{{card.title}}</h5>
               </a>
+              <span>{{card.date}}</span>
+              <p>{{card.text}}</p>
             </div>
           </div>
         </div>
@@ -50,36 +54,39 @@ export default {
 }
 
 .card {
-  margin-bottom: 1.5rem;
-  position: relative;
+  background-color: transparent;
+}
+
+.image-container {
+  overflow: hidden;
+  height: 255px;
+  margin-bottom: 1rem;
 }
 
 img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.card:hover .link {
-  top: 0;
-  left: 0;
-  visibility: visible;
-  background-image: linear-gradient(
-    $secondary-color 0%,
-    lighten($secondary-color, 33%) 100%
-  );
-}
-
-.link {
-  position: absolute;
-  visibility: hidden;
+  cursor: pointer;
   width: 100%;
   height: 100%;
-  display: flex;
+  object-fit: cover;
+  transition: all 1s;
 }
 
-.icon {
-  top: 100%;
-  color: white;
-  font-size: 2rem;
+.card:hover img {
+  transform: scale(1.1);
 }
+
+.text-area {
+  h5 {
+    color: $primary-color;
+    font-size: 1.3rem;
+  }
+  span {
+    font-size: 0.8rem;
+  }
+  p {
+    margin-top: 1rem;
+  }
+}
+
+
 </style>

@@ -46,7 +46,6 @@ export default {
 }
 .card {
   padding: 35px;
-  border: transparent;
 }
 
 img {

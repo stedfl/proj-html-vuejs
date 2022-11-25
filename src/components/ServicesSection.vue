@@ -17,7 +17,7 @@ export default {
 }
 </script>
 <template>
-  <div class="main-wrap">
+  <div class="main-wrap long">
     <div class="container-seo">
       <TitleArea :title="section.title" :text="section.text" :textColor="'white'"/>
       <div class="row">
@@ -41,13 +41,11 @@ export default {
 .main-wrap {
   background-color: $secondary-bg;
   background-image: url(../assets/img/pattern_background.png);
-  padding-bottom: 11.2rem;
 }
 .card {
   color: white;
   background-color: lighten($secondary-bg, 3%);
   padding: 35px;
-  border: transparent;
 }
 
 

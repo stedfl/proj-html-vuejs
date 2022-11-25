@@ -17,7 +17,7 @@ export default {
 };
 </script>
 <template>
-  <div class="main-wrap">
+  <div class="main-wrap short">
     <div class="container-seo">
       <TitleArea
         :title="section.title"
@@ -69,14 +69,14 @@ export default {
 .main-wrap {
   background-image: url(../assets/img/background1.jpg);
   background-size: cover;
-  padding-bottom: 7.5rem;
-}
-.card {
-  border: transparent;
 }
 
 .row {
   padding-top: 0;
+}
+
+.card {
+  cursor: pointer;
 }
 .type {
   padding: 1.5rem;

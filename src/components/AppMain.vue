@@ -3,6 +3,7 @@ import FeatureSection from './FeatureSection.vue';
 import ServicesSection from './ServicesSection.vue';
 import OurWorkSection from './OurWorkSection.vue';
 import PlansSection from './PlansSection.vue';
+import NewsSection from './NewsSection.vue';
 import {features, services, ourWork, plans, news, clients, callToAction} from '../data/main-components';
 export default {
   name: 'AppMain',
@@ -10,14 +11,16 @@ export default {
     FeatureSection,
     ServicesSection,
     OurWorkSection,
-    PlansSection
+    PlansSection,
+    NewsSection
   },
   data() {
     return {
       features,
       services,
       ourWork,
-      plans
+      plans,
+      news
     }
   }
 
@@ -29,6 +32,7 @@ export default {
     <ServicesSection :section="services" />
     <OurWorkSection :section="ourWork" />
     <PlansSection :section="plans"/>
+    <NewsSection :section="news"/>
   </main>
   
 </template>

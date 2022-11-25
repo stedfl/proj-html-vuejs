@@ -156,21 +156,24 @@ const news = {
   text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
   cards: [
     {
-      image: 'related-service-2-320x202',
+      image: 'related-service-2-700x441',
       title: 'why you need a SEO agency now',
+      link: '#',
       date: 'November 1st, 2017',
       text: 'ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit'
     },
     {
-      image: 'related-service-4-320x202',
+      image: 'related-service-4-700x441',
       title: 'seo tips for your startup',
+      link: '#',
       date: 'November 1st, 2017',
       text: 'ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit'
     },
     {
-      image: 'blog-spot-6-320x202',
+      image: 'blog-post-6-700x441',
       title: 'image optimization for your site',
       date: 'November 1st, 2017',
+      link: '#',
       text: 'ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit'
     },
   ],
