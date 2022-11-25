@@ -106,7 +106,7 @@ const plans = {
     cards: [
       {
         type: 'standard',
-        price: '99',
+        price: '19',
         frequency: 'monthly',
         info: [
           '5 projects', 
