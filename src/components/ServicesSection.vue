@@ -7,7 +7,7 @@ export default {
     TitleArea
   },
   props: {
-    services: Object
+    section: Object
   },
   data() {
     return {
@@ -19,9 +19,9 @@ export default {
 <template>
   <div class="main-wrap">
     <div class="container-seo">
-      <TitleArea :title="services.title" :text="services.text"/>
+      <TitleArea :title="section.title" :text="section.text"/>
       <div class="row">
-        <div v-for="(card, index) in services.cards" :key="index" class="col">
+        <div v-for="(card, index) in section.cards" :key="index" class="col">
           <div  class="card text-center">
             <div class="top">
               <i :class="['icon', card.icon, (card.icon === 'fa-google' ? 'fa-brands' : 'fa-solid')]"></i>

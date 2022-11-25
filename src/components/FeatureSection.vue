@@ -7,7 +7,7 @@ export default {
     TitleArea
   },
   props: {
-    features: Object
+    section: Object
   },
   data() {
     return {
@@ -19,9 +19,9 @@ export default {
 <template>
   <div class="main-wrap">
     <div class="container-seo">
-      <TitleArea :title="features.title" :text="features.text"/>
+      <TitleArea :title="section.title" :text="section.text"/>
       <div class="row">
-        <div v-for="(card, index) in features.cards" :key="index" class="col">
+        <div v-for="(card, index) in section.cards" :key="index" class="col">
           <div  class="card text-center">
             <div class="top">
               <i class="fa-solid icon" :class="card.icon"></i>
@@ -31,7 +31,7 @@ export default {
           </div>
         </div>
       </div>
-      <img :src="store.getPathImage(features.image.path, 'jpg')" :alt="features.image.name">
+      <img :src="store.getPathImage(section.image.path, 'jpg')" :alt="section.image.name">
     </div>
   </div>
 </template>

@@ -23,9 +23,9 @@ export default {
 </script>
 <template>
   <main>
-    <FeatureSection :features="features" />
-    <ServicesSection :services="services" />
-    <OurWorkSection :ourWork="ourWork" />
+    <FeatureSection :section="features" />
+    <ServicesSection :section="services" />
+    <OurWorkSection :section="ourWork" />
   </main>
   
 </template>

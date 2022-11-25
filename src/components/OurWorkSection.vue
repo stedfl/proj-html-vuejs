@@ -7,7 +7,7 @@ export default {
     TitleArea,
   },
   props: {
-    ourWork: Object,
+    section: Object,
   },
   data() {
     return {
@@ -19,20 +19,20 @@ export default {
 <template>
   <div class="main-wrap">
     <div class="container-seo text-center">
-      <TitleArea :title="ourWork.title" :text="ourWork.text" />
+      <TitleArea :title="section.title" :text="section.text" />
       <div class="row row-cols-3">
-        <div v-for="(card, index) in ourWork.cards" :key="index" class="col">
+        <div v-for="(card, index) in section.cards" :key="index" class="col">
           <div class="card text-center">
             <img :src="store.getPathImage(card, 'jpg')" :alt="card" />
             <div class="link justify-content-center align-items-center">
-              <a :href="ourWork.hover.link">
-                <i class="fa-solid icon" :class="ourWork.hover.icon"></i>
+              <a :href="section.hover.link">
+                <i class="fa-solid icon" :class="section.hover.icon"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <button class="btn-seo">{{ ourWork.button }}</button>
+      <button class="btn-seo">{{ section.button }}</button>
     </div>
   </div>
 </template>
