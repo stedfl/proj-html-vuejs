@@ -28,6 +28,9 @@ export default {
               <h5>{{card.title}}</h5>
             </div>
             <p>{{card.text}}</p>
+            <a :href="card.link.link">{{card.link.placeholder}}
+              <i class="fa-solid fa-chevron-right icon-chevron"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -48,6 +51,17 @@ export default {
   padding: 35px;
 }
 
+a {
+  color: $primary-color;
+  font-weight: 700;
+  text-transform: capitalize;
+  &:hover {
+    color: $primary-color; 
+  }
+  .icon-chevron {
+    font-size: 0.6rem;
+  }
+}
 
 img {
   margin-top: 2rem;

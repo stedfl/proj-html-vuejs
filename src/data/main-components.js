@@ -59,25 +59,37 @@ const services = {
         icon: 'fa-google',
         title: 'google seo',
         text: 'Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et dapibus faucibus odio.',
-        link: 'Let \'\ work together'
+        link: {
+          placeholder: 'read more',
+          link: '#'
+        } 
       },
       {
         icon: 'fa-gear',
         title: 'brand strategy',
         text: 'Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et dapibus faucibus odio.',
-        link: 'Let \'\ work together'
+        link: {
+          placeholder: 'read more',
+          link: '#'
+        }
       },
       {
         icon: 'fa-building',
         title: 'local SEO',
         text: 'Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et dapibus faucibus odio.',
-        link: 'Let \'\ work together',
+        link: {
+          placeholder: 'read more',
+          link: '#'
+        }
       },
       {
         icon: 'fa-chart-column',
         title: 'SEO analysis',
         text: 'Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et dapibus faucibus odio.',
-        link: 'Let \'\ work together',
+        link: {
+          placeholder: 'read more',
+          link: '#'
+        }
       }
     ]
 };
