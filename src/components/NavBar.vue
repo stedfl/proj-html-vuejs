@@ -13,7 +13,7 @@ export default {
     <ul class="seo d-flex align-items-center">
       <li v-for="(item, index) in menu" :key="index">
         <a
-          v-if="(isApply && item ==='apply') || (isAllOthers && item !== 'apply') || (!isApply && item === 'get in touch')"
+          v-if="(isApply && item ==='apply') || (isAllOthers && item !== 'apply' && item !== 'get in touch' ) || (!isApply && item === 'get in touch')"
           :class="[item === 'apply' ? 'apply' : 'others']"
           class="menu-items text"
           href="#"
