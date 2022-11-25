@@ -21,31 +21,31 @@ export default {
     <div class="container-seo text-center">
       <TitleArea :title="section.title" :text="section.text" :textColor="'black'" />
       <div class="row row-cols-3">
-        <div v-for="(card, index) in section.cards" :key="index" class="col">
-          <div class="card text-center">
-            <div class="image-container">
-              <img :src="store.getPathImage(card.image, 'jpg')" :alt="card" />
-            </div>
-            <div class="text-area">
-              <a :href="card.link">
-                <h5>{{card.title}}</h5>
-              </a>
-              <span>{{card.date}}</span>
-              <p>{{card.text}}</p>
-            </div>
+        <div v-for="(testimonial, index) in section.testimonials" :key="index" class="testimonial">
+          <img :src="store.getPathImage(testimonial.image, 'jpg')" :alt="testimonial.name" />
+          <div class="text-area">
+            <p>{{testimonial.opinion}}</p>
+            <span>{{testimonial.name}}</span>
+            <span>{{testimonial.job}}</span>
           </div>
         </div>
+        
       </div>
-      <button class="btn-seo default">{{ section.button }}</button>
     </div>
   </div>
+
+  
 </template>
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
 
 .main-wrap {
-  background-color: $primary-bg;
+  background-color: white;
+}
+
+.title-section {
+  padding-bottom: 3.1rem;
 }
 
 .row {
@@ -53,38 +53,16 @@ export default {
   padding-top: 0;
 }
 
-.card {
-  background-color: transparent;
-}
-
-.image-container {
-  overflow: hidden;
-  height: 255px;
-  margin-bottom: 1rem;
-}
-
 img {
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  transition: all 1s;
-}
-
-.card:hover img {
-  transform: scale(1.1);
+  border-radius: 50%;
 }
 
 .text-area {
-  h5 {
-    color: $primary-color;
-    font-size: 1.3rem;
-  }
-  span {
-    font-size: 0.8rem;
-  }
   p {
-    margin-top: 1rem;
+    font-style: italic;
   }
 }
 </style>

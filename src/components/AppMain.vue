@@ -47,7 +47,7 @@ export default {
       <NewsSection :section="news"/>
     </section>
     <section class="clients">
-      <clientsSection :section="news"/>
+      <clientsSection :section="clients"/>
     </section>
   </main>
   
