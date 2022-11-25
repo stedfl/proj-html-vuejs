@@ -5,16 +5,43 @@ const menu = [
   'Where we work',
   'Careers',
   'apply',
-  'news'
+  'news',
+  'get in touch'
 ];
 
 const credits = {
   info: [
-    'copyright 2017',
-    'avada theme by Theme Fusion',
-    'all right reserved',
-    'powered by word press'
+    { 
+      icon: 'fa-copyright',
+      text: 'copyright 2012-2020',
+      link: {
+        placeholder: '',
+        link: ''
+      }
+    },
+    {
+      text: 'avada theme by ',
+      link: {
+        placeholder: 'theme fusion',
+        link: '#'
+      }
+    },
+    {
+      text: 'all right reserved',
+      link: {
+        placeholder: '',
+        link: ''
+      }
+    },
+    {
+      text: 'powered by ',
+      link: {
+        placeholder: 'word press',
+        link: '#'
+      }
+    }
   ],
+
   social: [
     {
       icon: 'fa-facebook-f',

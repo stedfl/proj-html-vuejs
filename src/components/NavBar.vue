@@ -4,20 +4,16 @@ export default {
   props: {
     menu: Array,
     isApply: Boolean,
-    isAllOthers: Boolean
+    isAllOthers: Boolean,
   },
-  data() {
-    return {
-    };
-  }
 };
 </script>
 <template>
   <nav class="d-flex align-items-center">
     <ul class="seo d-flex align-items-center">
-      <li v-for="(item, index) in this.menu" :key="index">
+      <li v-for="(item, index) in menu" :key="index">
         <a
-          v-if="(isApply && item ==='apply') || (isAllOthers && item !== 'apply')"
+          v-if="(isApply && item ==='apply') || (isAllOthers && item !== 'apply') || (!isApply && item === 'get in touch')"
           :class="[item === 'apply' ? 'apply' : 'others']"
           class="menu-items text"
           href="#"
@@ -61,13 +57,10 @@ a {
   font-size: 0.9rem;
   font-weight: 500;
   text-transform: capitalize;
+  transition: all 0.5s;
   &:hover {
     color: $primary-color;
   }
 }
-.apply {
-}
 
-li:hover {
-}
 </style>
