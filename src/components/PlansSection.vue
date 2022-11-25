@@ -78,6 +78,10 @@ export default {
 .card {
   cursor: pointer;
 }
+
+.card div:nth-child(even) {
+  background-color: $primary-bg;
+}
 .type {
   padding: 1.5rem;
 }
@@ -139,9 +143,5 @@ li {
 .btn-seo.special:hover {
   color: $secondary-color;
   border: 2px solid $secondary-color;
-}
-
-.card div:nth-child(even) {
-  background-color: $primary-bg;
 }
 </style>

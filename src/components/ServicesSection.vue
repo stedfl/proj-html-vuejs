@@ -51,6 +51,10 @@ export default {
   padding: 35px;
 }
 
+.icon {
+  cursor: pointer;
+}
+
 a {
   color: $primary-color;
   font-weight: 700;
