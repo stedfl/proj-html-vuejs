@@ -43,7 +43,6 @@ export default {
 
 .main-wrap {
   background-color: $primary-bg;
-  padding-top: 2rem;
 }
 .card {
   padding: 35px;

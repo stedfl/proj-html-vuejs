@@ -86,13 +86,17 @@ const ourWork = {
     title: 'our work',
     text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
     cards: [
-      'case-study-gallery-3-1',
-      'case-study-gallery-2',
-      'case-study-gallery-1-1',
-      'case-study-gallery-4-1',
-      'case-study-gallery-5-1',
-      'case-study-gallery-6-1',
+      'case-study-gallery-3-1-400x300',
+      'case-study-gallery-2-400x300',
+      'case-study-gallery-1-1-400x300',
+      'case-study-gallery-4-1-400x300',
+      'case-study-gallery-5-1-400x300',
+      'case-study-gallery-6-1-400x300',
     ],
+    hover: {
+      link: '#',
+      icon: 'fa-link'
+    },
     button: 'view our work'
 };
 

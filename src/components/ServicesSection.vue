@@ -42,7 +42,6 @@ export default {
   color: white;
   background-color: $secondary-bg;
   background-image: url(../assets/img/pattern_background.png);
-  padding-top: 2rem;
   padding-bottom: 11.2rem;
 }
 .card {

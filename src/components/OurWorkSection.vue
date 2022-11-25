@@ -1,53 +1,85 @@
 <script>
-import {store} from '../data/store'
-import TitleArea from './TitleArea.vue';
+import { store } from "../data/store";
+import TitleArea from "./TitleArea.vue";
 export default {
-  name: 'OurWorkSection',
+  name: "OurWorkSection",
   components: {
-    TitleArea
+    TitleArea,
   },
   props: {
-    ourWork: Object
+    ourWork: Object,
   },
   data() {
     return {
-      store
-    }
-  }
-}
+      store,
+    };
+  },
+};
 </script>
 <template>
   <div class="main-wrap">
-    <div class="container-seo">
-      <TitleArea :title="ourWork.title" :text="ourWork.text"/>
-      <div class="row">
+    <div class="container-seo text-center">
+      <TitleArea :title="ourWork.title" :text="ourWork.text" />
+      <div class="row row-cols-3">
         <div v-for="(card, index) in ourWork.cards" :key="index" class="col">
-          <div  class="card text-center">
-            <img :src="store.getPathImage(card, 'jpg')" alt="">
+          <div class="card text-center">
+            <img :src="store.getPathImage(card, 'jpg')" :alt="card" />
+            <div class="link justify-content-center align-items-center">
+              <a :href="ourWork.hover.link">
+                <i class="fa-solid icon" :class="ourWork.hover.icon"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
+      <button class="btn-seo">{{ ourWork.button }}</button>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-@use '../styles/partials/variables' as *;
+@use "../styles/partials/variables" as *;
 
 .main-wrap {
   background-color: $primary-bg;
-  background-image: url(../assets/img/pattern_background.png);
-  padding-top: 2rem;
-  padding-bottom: 11.2rem;
+  padding-bottom: 7.5rem;
 }
 
-  h3 {
-    margin-bottom: 1rem;
-  }
+.row {
+  margin-bottom: 3.7rem;
+}
 
+.card {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
 
 img {
-  margin-top: 2rem;
+  width: 100%;
+  object-fit: cover;
 }
 
+.card:hover .link {
+  top: 0;
+  left: 0;
+  visibility: visible;
+  background-image: linear-gradient(
+    $secondary-color 0%,
+    lighten($secondary-color, 33%) 100%
+  );
+}
+
+.link {
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.icon {
+  top: 100%;
+  color: white;
+  font-size: 2rem;
+}
 </style>
