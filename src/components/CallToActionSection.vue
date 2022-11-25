@@ -24,7 +24,6 @@ export default {
         <button class="btn-seo default">{{section.button}}</button>
       </div>
     </div>
-  
   </div>
 </template>
 

@@ -3,6 +3,8 @@ export default {
   name: "NavBar",
   props: {
     menu: Array,
+    isApply: Boolean,
+    isAllOthers: Boolean
   },
   data() {
     return {
@@ -15,11 +17,12 @@ export default {
     <ul class="seo d-flex align-items-center">
       <li v-for="(item, index) in this.menu" :key="index">
         <a
-          :class="{ apply: item === 'apply' }"
+          v-if="(isApply && item ==='apply') || (isAllOthers && item !== 'apply')"
+          :class="[item === 'apply' ? 'apply' : 'others']"
           class="menu-items text"
           href="#"
-          >{{ item }}</a
-        >
+          >{{ item }}
+        </a >
       </li>
     </ul>
   </nav>
@@ -34,7 +37,7 @@ export default {
   text-transform: uppercase;
   border-radius: 5px;
   font-size: 0.7rem;
-  margin-left: -25px;
+  margin-left: 10px;
 }
 
 ul.seo {
@@ -42,13 +45,20 @@ ul.seo {
   margin: 0;
 }
 
-li {
+.others {
   margin-left: 2rem;
+}
+
+header a {
+  color: white;
+}
+
+footer a {
+  color: black;
 }
 
 a {
   font-size: 0.9rem;
-  color: white;
   font-weight: 500;
   text-transform: capitalize;
   &:hover {

@@ -2,7 +2,6 @@
 import Navbar from "./NavBar.vue";
 import { menu } from "../data/menu";
 import { hero } from "../data/main-components";
-// import {getPathImage} from "../data/functions";
 export default {
   name: "AppHeader",
   components: {
@@ -12,7 +11,6 @@ export default {
     return {
       menu,
       hero,
-      // getPathImage
     };
   },
 };
@@ -25,7 +23,7 @@ export default {
           <img src="/logo/logo_seo_w_1x.png" alt="logo" />
         </div>
         <div class="right d-flex">
-          <Navbar :menu="menu" />
+          <Navbar :menu="menu" :isApply="true" :isAllOthers="true"/>
           <button class="btn-seo default">get in touch now</button>
         </div>
       </header>
