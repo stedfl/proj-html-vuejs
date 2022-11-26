@@ -201,12 +201,12 @@ const clients = {
       job: 'creo tech',
       opinion: 'Ability proceeds from a fusion of skills, knowledge, understanding and imagination, consolidated by experience.'
     },
-    // {
-    //   image: 'testimonials-1',
-    //   name: 'shelia mccourtney',
-    //   job: 'architect',
-    //   opinion: 'Beauty is when you can appreciate yourself. When you love yourself, that’s when you’re most beautiful.'
-    // },
+    {
+      image: 'testimonials-1',
+      name: 'shelia mccourtney',
+      job: 'architect',
+      opinion: 'Beauty is when you can appreciate yourself. When you love yourself, that’s when you’re most beautiful.'
+    },
   ],
   partners: [
     {
