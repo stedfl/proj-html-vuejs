@@ -1,11 +1,13 @@
 <script>
   import { clients } from '../data/main-components';
-  import { Navigation, Pagination, A11y } from 'swiper';
+  import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper';
   import {store} from '../data/store';
   import { Swiper, SwiperSlide } from 'swiper/vue';
   import 'swiper/css';
   import 'swiper/css/navigation';
   import 'swiper/css/pagination';
+  import 'swiper/css/autoplay';
+  import "swiper/css/effect-fade";
 
   
   export default {
@@ -21,7 +23,7 @@
 
       return {
 
-        modules: [Navigation, Pagination, A11y],
+        modules: [EffectFade, Navigation, Pagination, Autoplay],
       };
     },
     data() {
@@ -41,6 +43,14 @@
     :modules="modules"
     :slides-per-view="1"
     :space-between="50"
+    :autoplay="{
+      delay: 2500,
+      disableOnInteraction: false,
+    }"
+    :effect="'fade'"
+    :fadeEffect = "{
+      crossFade: true
+    }"
     :pagination="{ clickable: true }"
     @swiper="onSwiper"
     @slideChange="onSlideChange"
@@ -75,6 +85,7 @@ img {
 }
 
 .text-area {
+  letter-spacing: 2px;
   p {
     font-style: italic;
     font-size: 1.1rem;

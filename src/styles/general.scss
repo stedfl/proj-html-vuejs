@@ -111,6 +111,10 @@ p.p2 {
   margin-bottom: 2rem;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: black;
+}
+
 @media all and (max-width: 1524px ) {
   .container-seo {
     width: 80%;

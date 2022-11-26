@@ -203,7 +203,7 @@ const clients = {
     },
     {
       image: 'testimonials-1',
-      name: 'shelia mccourtney',
+      name: 'shelia mcCourtney',
       job: 'architect',
       opinion: 'Beauty is when you can appreciate yourself. When you love yourself, that’s when you’re most beautiful.'
     },
