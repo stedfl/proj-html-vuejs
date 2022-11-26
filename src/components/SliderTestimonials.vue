@@ -1,5 +1,4 @@
 <script>
-  import { clients } from '../data/main-components';
   import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper';
   import {store} from '../data/store';
   import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -11,7 +10,7 @@
 
   
   export default {
-    name: 'SliderClients',
+    name: 'SliderTestimonials',
     components: {
       Swiper,
       SwiperSlide,
@@ -28,15 +27,11 @@
     },
     data() {
       return {
-        clients,
         store
       }
     }
   };
 </script>
-
-
-
 
 <template>
   <swiper
@@ -44,7 +39,7 @@
     :slides-per-view="1"
     :space-between="50"
     :autoplay="{
-      delay: 2500,
+      delay: 4000,
       disableOnInteraction: false,
     }"
     :effect="'fade'"
@@ -65,8 +60,6 @@
         </div>
       </div>
     </swiper-slide>
-
-    
   </swiper>
 </template>
 

@@ -1,12 +1,12 @@
 <script>
 import { store } from "../data/store";
 import TitleArea from "./TitleArea.vue";
-import SliderClients from "./SliderClients.vue";
+import SliderTestimonials from "./SliderTestimonials.vue";
 export default {
   name: "ClientsSection",
   components: {
     TitleArea,
-    SliderClients
+    SliderTestimonials
   },
   props: {
     section: Object,
@@ -23,7 +23,7 @@ export default {
     <div class="container-seo text-center">
       <TitleArea :title="section.title" :text="section.text" :textColor="'black'" />
       <div class="row">
-        <SliderClients :testimonials="section.testimonials"/>
+        <SliderTestimonials :testimonials="section.testimonials"/>
       </div>
     </div>
   </div>
