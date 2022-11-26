@@ -2,11 +2,13 @@
 import { store } from "../data/store";
 import TitleArea from "./TitleArea.vue";
 import SliderTestimonials from "./SliderTestimonials.vue";
+import SliderPartners from "./SliderPartners.vue";
 export default {
   name: "ClientsSection",
   components: {
     TitleArea,
-    SliderTestimonials
+    SliderTestimonials,
+    SliderPartners
   },
   props: {
     section: Object,
@@ -22,8 +24,11 @@ export default {
   <div class="main-wrap">
     <div class="container-seo text-center">
       <TitleArea :title="section.title" :text="section.text" :textColor="'black'" />
-      <div class="row">
+      <div class="row testimonials">
         <SliderTestimonials :testimonials="section.testimonials"/>
+      </div>
+      <div class="row partners">
+        <SliderPartners :partners="section.partners"/>
       </div>
     </div>
   </div>
@@ -34,16 +39,23 @@ export default {
 
 .main-wrap {
   background-color: white;
-  padding-bottom: 5rem;
+  padding-bottom: 0;
 }
 
 .title-section {
   padding-bottom: 3.1rem;
 }
 
-.row {
+.row.testimonials {
   padding-top: 0;
   text-align: center;
+}
+
+.row.partners {
+  width: 100%;
+  padding: 4rem 0 5.5rem ;
+  border-top: 1px solid darken($primary-bg, 5%);
+  margin-top: 4rem;
 }
 
 .btn-container {

@@ -210,28 +210,28 @@ const clients = {
   ],
   partners: [
     {
-      name: 'avada agency inc',
-      image: 'clients_partner_1-200x202',
-    },
-    {
       name: 'avada law',
-      image: 'clients_partner_2-200x200',
+      image: 'clients_partner_2-200x202',
     },
     {
       name: 'avada vet',
-      image: 'clients_partner_3-200x200',
+      image: 'clients_partner_3-200x202',
     },
     {
       name: 'avada health',
-      image: 'clients_partner_4-200x200',
+      image: 'clients_partner_4-200x202',
     },
     {
       name: 'avada',
-      image: 'clients_partner_5-200x200',
+      image: 'clients_partner_5-200x202',
     },
     {
       name: 'the avada university',
-      image: 'clients_partner_6-200x200',
+      image: 'clients_partner_6-200x202',
+    },
+    {
+      name: 'avada agency inc',
+      image: 'clients_partner_1-200x202',
     },
   ]
 };

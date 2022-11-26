@@ -47,8 +47,6 @@
       crossFade: true
     }"
     :pagination="{ clickable: true }"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
   >
     <swiper-slide v-for="(testimonial, index) in testimonials " :key="index"> 
       <div class="testimonial">
