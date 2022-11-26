@@ -2,13 +2,15 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+import ScrollButton from './components/ScrollButton.vue';
 
 export default {
   name: 'App',
   components: {
     AppHeader,
     AppMain,
-    AppFooter
+    AppFooter,
+    ScrollButton
   },
   data() {
     return {
@@ -22,7 +24,7 @@ export default {
   <AppHeader :menu="menu"/>
   <AppMain/>
   <AppFooter/>
-  
+  <ScrollButton/>
 </template>
 
 

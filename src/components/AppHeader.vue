@@ -18,7 +18,7 @@ export default {
 <template>
   <div class="main-wrap">
     <div class="container-seo h-100 pt-4">
-      <header class="d-flex justify-content-between align-items-center">
+      <header id="header" class="d-flex justify-content-between align-items-center">
         <div class="logo">
           <img src="/logo/logo_seo_w_1x.png" alt="logo" />
         </div>

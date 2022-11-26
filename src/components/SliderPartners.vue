@@ -37,10 +37,6 @@
     :modules="modules"
     :slides-per-view="4"
     :space-between="50"
-    :loopAdditionalSlides="3"
-    :loop="true"
-    :rewind="true"
-    :swipeHandler="false"
     :autoplay="{
       delay: 2500,
       disableOnInteraction: false,

@@ -232,7 +232,7 @@ const clients = {
     {
       name: 'avada agency inc',
       image: 'clients_partner_1-200x202',
-    },
+    }
   ]
 };
 
