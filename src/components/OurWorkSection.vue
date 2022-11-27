@@ -1,5 +1,5 @@
 <script>
-import {getPathImage} from '../data/functions';
+import { getPathImage } from "../data/functions";
 import TitleArea from "./TitleArea.vue";
 export default {
   name: "OurWorkSection",
@@ -12,6 +12,7 @@ export default {
   data() {
     return {
       getPathImage,
+      showLink: null,
     };
   },
 };
@@ -19,16 +20,29 @@ export default {
 <template>
   <div class="main-wrap short">
     <div class="container-seo text-center">
-      <TitleArea :title="section.title" :text="section.text" :textColor="'black'" />
+      <TitleArea
+        :title="section.title"
+        :text="section.text"
+        :textColor="'black'"
+      />
       <div class="row row-cols-3">
         <div v-for="(card, index) in section.cards" :key="index" class="col">
-          <div class="card text-center">
+          <div
+            @mouseenter="showLink = index"
+            @mouseleave="showLink = null"
+            class="card text-center"
+          >
             <img :src="getPathImage(card, 'jpg')" :alt="card" />
-            <div class="link justify-content-center align-items-center">
-              <a :href="section.hover.link">
-                <i class="fa-solid icon" :class="section.hover.icon"></i>
-              </a>
-            </div>
+            <transition name="fade">
+              <div
+                v-if="showLink === index"
+                class="link justify-content-center align-items-center"
+              >
+                <a :href="section.hover.link">
+                  <i class="fa-solid icon" :class="section.hover.icon"></i>
+                </a>
+              </div>
+            </transition>
           </div>
         </div>
       </div>
@@ -59,26 +73,30 @@ img {
   object-fit: cover;
 }
 
-.card:hover .link {
+.link {
+  display: flex;
+  position: absolute;
   top: 0;
   left: 0;
-  visibility: visible;
+  width: 100%;
+  height: 100%;
   background-image: linear-gradient(
     $secondary-color 0%,
     lighten($secondary-color, 33%) 100%
   );
 }
 
-.link {
-  position: absolute;
-  visibility: hidden;
-  width: 100%;
-  height: 100%;
-  display: flex;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 .icon {
-  top: 100%;
   color: white;
   font-size: 2rem;
 }

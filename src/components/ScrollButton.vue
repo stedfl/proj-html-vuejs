@@ -42,8 +42,8 @@ export default {
 @use "../styles/partials/variables" as *;
 
 .fade-enter-active,
-.fase-leave-active {
-  transition: opacity 1s ease;
+.fade-leave-active {
+  transition: opacity 0.5s ease;
 }
 
 .fade-enter-from,

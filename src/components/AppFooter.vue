@@ -38,7 +38,7 @@ export default {
           v-for="(item, index) in credits.info"
           :key="index"
           :class="{
-            'border-item': index === 0 || index === credits.info.length - 1,
+            'border-item': isBorder,
           }"
         >
           <i :class="item.icon" class="fa-regular icon-copyright"></i>
