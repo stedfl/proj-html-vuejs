@@ -1,45 +1,32 @@
-<!-- <script>
-  // import Swiper core and required modules
-  import { clients } from '../data/main-components';
-  import { Navigation, Pagination, A11y } from 'swiper';
-  import {store} from '../data/store';
+<script>
+import { getPathImage } from "../data/functions";
+import { hero } from "../data/main-components";
+import { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-  // Import Swiper Vue.js components
-  import { Swiper, SwiperSlide } from 'swiper/vue';
-
-  // Import Swiper styles
-  import 'swiper/css';
-  import 'swiper/css/navigation';
-  import 'swiper/css/pagination';
-
-  // Import Swiper styles
-  export default {
-    name: 'Slider',
-    components: {
-      Swiper,
-      SwiperSlide,
-    },
-    props: {
-      testimonials: Array
-    },
-    setup() {
-
-      return {
-
-        modules: [Navigation, Pagination, A11y],
-      };
-    },
-    data() {
-      return {
-        clients,
-        store
-      }
-    }
-  };
+export default {
+  name: "SliderHero",
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  props: {},
+  setup() {
+    return {
+      modules: [Navigation, Pagination],
+      getPathImage
+    };
+  },
+  data() {
+    return {
+      hero
+    };
+  },
+};
 </script>
-
-
-
 
 <template>
   <swiper
@@ -47,55 +34,75 @@
     :slides-per-view="1"
     :space-between="50"
     navigation
-    :pagination="{ clickable: true }"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
   >
-    <swiper-slide v-for="(testimonial, index) in testimonials " :key="index"> 
-      <div class="testimonial">
-        <img :src="store.getPathImage(testimonial.image, 'jpg')" :alt="testimonial.name" />
-        <div class="text-area">
-          <p>{{testimonial.opinion}}</p>
-          <span class="name">{{testimonial.name}},</span>
-          <span class="job">{{testimonial.job}}</span>
+    <swiper-slide v-for="(item, index) in hero" :key="index">
+      <div :class="item.background" class="main-wrap">
+        <div class="container-seo h-100 pt-4 d-flex">
+          <div class="hero d-flex align-items-center">
+            <div class="content w-100">
+              <h1>{{ item.title }}</h1>
+              <p class="p1">{{item.text }}</p>
+              <div class="buttons">
+                <button class="btn-seo default">buy avada now</button>
+                <button class="btn-seo contact">contact us</button>
+              </div>
+            </div>
+          </div>
+          <div class="img-container d-flex align-items-center">
+            <img :src="getPathImage(item.image, 'png')" :alt="item.image">
+          </div>
         </div>
       </div>
-    </swiper-slide>
 
-    
+      
+    </swiper-slide>
   </swiper>
 </template>
 
 <style lang="scss" scoped>
-
-.testimonial {
-  width: 60%;
-  margin: 0 auto 3rem;
+@use "../styles/partials/variables" as *;
+.main-wrap {
+  height: 870px;
+  width: 100%;
 }
 
-img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
+.main-wrap.hero-1 {
+  background-image: linear-gradient(to bottom right, #321b5b, #833459, #fe9c48);
 }
 
-.text-area {
-  p {
-    font-style: italic;
-    font-size: 1.1rem;
-    margin: 1.8rem 0;
+.main-wrap.hero-2 {
+  background-image: linear-gradient(to bottom right, #4f01bc, #0aa9e2);
+}
+
+.main-wrap.hero-3 {
+  background-image: linear-gradient(to bottom right, #090e7c, #9f39fc);
+}
+
+.hero {
+  height: calc(100% - 60px);
+  width: 50%;
+  color: white;
+  .btn-seo {
+    margin-right: 1.5rem;
   }
-  .name {
-    text-transform: capitalize;
-    font-weight: 800;
-    margin-right: 0.7rem;
-    font-size: 1.1rem;
+  .btn-seo.contact {
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color;
+    &:hover {
+      background-color: lighten($secondary-color, 5%);
+    }
   }
-  .job {
-    text-transform: uppercase;
-    font-size: 1.1rem;
+}
+p {
+  padding-right: 4rem;
+  margin: 1.5rem 0;
+}
+
+.image-container {
+  width: 50%;
+  img {
+    width: 60%;
+    object-fit: cover;
   }
 }
 </style>
- -->

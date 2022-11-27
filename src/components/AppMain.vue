@@ -1,4 +1,5 @@
 <script>
+import SliderHero from "./SliderHero.vue";
 import FeatureSection from './FeatureSection.vue';
 import ServicesSection from './ServicesSection.vue';
 import OurWorkSection from './OurWorkSection.vue';
@@ -10,6 +11,7 @@ import {features, services, ourWork, plans, news, clients, callToAction} from '.
 export default {
   name: 'AppMain',
   components: {
+    SliderHero,
     FeatureSection,
     ServicesSection,
     OurWorkSection,
@@ -34,6 +36,7 @@ export default {
 </script>
 <template>
   <main>
+    <SliderHero />
     <section class="features">
       <FeatureSection :section="features" />
     </section>

@@ -1,29 +1,25 @@
-const hero = {
+const hero = [
+  {
     title: 'SEM campaigns made simple with avada',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu ornare erat. Curabitur pulvinar elit',
-    images: {
-      mainImage: [
-        {
-          name: 'hero_1',
-          path: ''
-        },
-        {
-          name: 'hero_2',
-          path: ''
-        }
-      ],
-      background: [
-        {
-          name: 'background_1',
-          path: ''
-        },
-        {
-          name: 'background_2',
-          path: ''
-        }
-      ]
-    }
-  };
+    image: 'best-sem-seo-services-slide-2' ,
+    background: 'hero-1'
+  },
+  {
+    title: 'rank your local business with SEO',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu ornare erat. Curabitur pulvinar elit',
+    image: 'best-seo-services-slide-3',
+    background: 'hero-2'
+  },
+  {
+    title: 'we provide the best seo services',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu ornare erat. Curabitur pulvinar elit',
+    image: 'best-seo-services-slide-1',
+    background: 'hero-3'
+  },
+
+
+]; 
 
 const features = {
     title: 'Meet the new agency SEO template from the avada team',
