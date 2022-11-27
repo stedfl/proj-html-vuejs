@@ -1,11 +1,12 @@
 <script>
 import { getPathImage } from "../data/functions";
 import { hero } from "../data/main-components";
-import { Navigation, Pagination, Autoplay } from "swiper";
+import { Navigation, Pagination, Autoplay, EffectCreative } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/effect-creative";
 
 export default {
   name: "SliderHero",
@@ -16,7 +17,7 @@ export default {
   props: {},
   setup() {
     return {
-      modules: [Navigation, Pagination, Autoplay],
+      modules: [Navigation, Pagination, Autoplay, EffectCreative],
       getPathImage
     };
   },
@@ -33,6 +34,16 @@ export default {
     :modules="modules"
     :slides-per-view="1"
     :speed="1500"
+    :effect="'creative'"
+    :creativeEffect="{
+      prev: {
+        shadow: true,
+        translate: ['-20%', 0, -1],
+      },
+      next: {
+        translate: ['100%', 0, 0],
+      },
+    }"
     :autoplay="{
       delay: 6000,
       disableOnInteraction: false,
