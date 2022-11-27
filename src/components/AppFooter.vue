@@ -84,6 +84,9 @@ ul.credits {
   margin-right: -1px;
   color: $grey-color;
   }
+  a:hover {
+    color: $primary-color;
+  }
   
 }
 
