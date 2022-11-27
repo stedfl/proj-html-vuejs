@@ -82,10 +82,13 @@ export default {
 
 .price-container {
   padding: 1rem;
+ 
 }
 
 .price {
   position: relative;
+  width: 130px;
+  margin: 0 auto;
 }
 
 .icon-dollar, .cents {
@@ -96,7 +99,6 @@ export default {
   font-size: 1.2rem;
   margin-right: 10px;
   top: 25px;
-  left: 65px;
 }
 
 .integer,
@@ -108,6 +110,7 @@ export default {
 
 .integer {
   font-size: 3.4rem;
+  margin-left: 10px;
 }
 
 .cents {

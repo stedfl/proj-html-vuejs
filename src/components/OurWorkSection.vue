@@ -66,6 +66,7 @@ export default {
 .card {
   margin-bottom: 1.5rem;
   position: relative;
+  cursor: pointer;
 }
 
 img {
