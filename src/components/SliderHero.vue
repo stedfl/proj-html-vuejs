@@ -1,7 +1,7 @@
 <script>
 import { getPathImage } from "../data/functions";
 import { hero } from "../data/main-components";
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -16,7 +16,7 @@ export default {
   props: {},
   setup() {
     return {
-      modules: [Navigation, Pagination],
+      modules: [Navigation, Pagination, Autoplay],
       getPathImage
     };
   },
@@ -32,7 +32,11 @@ export default {
   <swiper
     :modules="modules"
     :slides-per-view="1"
-    :space-between="50"
+    :autoplay="{
+      delay: 6000,
+      disableOnInteraction: false,
+    }"
+    :loop="true"
     navigation
   >
     <swiper-slide v-for="(item, index) in hero" :key="index">
@@ -64,6 +68,7 @@ export default {
 .main-wrap {
   height: 870px;
   width: 100%;
+  background-image: url(../assets/img/pattern_background.png);
 }
 
 .main-wrap.hero-1 {
