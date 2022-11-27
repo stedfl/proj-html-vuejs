@@ -1,5 +1,4 @@
 <script>
-import { store } from "../data/store";
 import TitleArea from "./TitleArea.vue";
 export default {
   name: "PlansSection",
@@ -8,12 +7,7 @@ export default {
   },
   props: {
     section: Object,
-  },
-  data() {
-    return {
-      store,
-    };
-  },
+  }
 };
 </script>
 <template>

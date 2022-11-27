@@ -1,5 +1,5 @@
 <script>
-import { store } from "../data/store";
+import {getPathImage} from '../data/functions';
 import TitleArea from "./TitleArea.vue";
 export default {
   name: "OurWorkSection",
@@ -11,7 +11,7 @@ export default {
   },
   data() {
     return {
-      store,
+      getPathImage,
     };
   },
 };
@@ -23,7 +23,7 @@ export default {
       <div class="row row-cols-3">
         <div v-for="(card, index) in section.cards" :key="index" class="col">
           <div class="card text-center">
-            <img :src="store.getPathImage(card, 'jpg')" :alt="card" />
+            <img :src="getPathImage(card, 'jpg')" :alt="card" />
             <div class="link justify-content-center align-items-center">
               <a :href="section.hover.link">
                 <i class="fa-solid icon" :class="section.hover.icon"></i>

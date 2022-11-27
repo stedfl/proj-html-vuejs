@@ -1,5 +1,4 @@
 <script>
-import { store } from "../data/store";
 import TitleArea from "./TitleArea.vue";
 import SliderTestimonials from "./SliderTestimonials.vue";
 import SliderPartners from "./SliderPartners.vue";
@@ -12,12 +11,7 @@ export default {
   },
   props: {
     section: Object,
-  },
-  data() {
-    return {
-      store,
-    };
-  },
+  }
 };
 </script>
 <template>

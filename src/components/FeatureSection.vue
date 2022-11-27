@@ -1,5 +1,5 @@
 <script>
-import {store} from '../data/store'
+import {getPathImage} from '../data/functions';
 import TitleArea from './TitleArea.vue';
 export default {
   name: 'FeatureSection',
@@ -11,7 +11,7 @@ export default {
   },
   data() {
     return {
-      store
+      getPathImage
     }
   }
 }
@@ -31,7 +31,7 @@ export default {
           </div>
         </div>
       </div>
-      <img :src="store.getPathImage(section.image.path, 'jpg')" :alt="section.image.name">
+      <img :src="getPathImage(section.image.path, 'jpg')" :alt="section.image.name">
     </div>
   </div>
 </template>

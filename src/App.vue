@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader :menu="menu"/>
+  <AppHeader />
   <AppMain/>
   <AppFooter/>
   <ScrollButton/>

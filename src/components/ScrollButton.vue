@@ -15,16 +15,10 @@ export default {
   methods: {
     handleScroll (event) {
       const rootElement = document.documentElement;
-      console.log('scroll client:' + rootElement.clientHeight);
-      console.log('scroll top' + rootElement.scrollTop );
       if ((rootElement.scrollTop > rootElement.clientHeight )) {
         this.showScrollToTop = true;
-        console.log('Show button')
-        // scrollToTopBtn.classList.add("showBtn")
       } else {
-        console.log('hide button')
         this.showScrollToTop = false;
-        // scrollToTopBtn.classList.remove("showBtn")
       }
     }
   }

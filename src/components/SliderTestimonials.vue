@@ -1,36 +1,33 @@
 <script>
-  import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper';
-  import {store} from '../data/store';
-  import { Swiper, SwiperSlide } from 'swiper/vue';
-  import 'swiper/css';
-  import 'swiper/css/navigation';
-  import 'swiper/css/pagination';
-  import 'swiper/css/autoplay';
-  import "swiper/css/effect-fade";
+import { getPathImage } from "../data/functions";
+import { EffectFade, Navigation, Pagination, Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
 
-  
-  export default {
-    name: 'SliderTestimonials',
-    components: {
-      Swiper,
-      SwiperSlide,
-    },
-    props: {
-      testimonials: Array
-    },
-    setup() {
-
-      return {
-
-        modules: [EffectFade, Navigation, Pagination, Autoplay],
-      };
-    },
-    data() {
-      return {
-        store
-      }
-    }
-  };
+export default {
+  name: "SliderTestimonials",
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  props: {
+    testimonials: Array,
+  },
+  setup() {
+    return {
+      modules: [EffectFade, Navigation, Pagination, Autoplay],
+    };
+  },
+  data() {
+    return {
+      getPathImage,
+    };
+  },
+};
 </script>
 
 <template>
@@ -43,18 +40,21 @@
       disableOnInteraction: false,
     }"
     :effect="'fade'"
-    :fadeEffect = "{
-      crossFade: true
+    :fadeEffect="{
+      crossFade: true,
     }"
     :pagination="{ clickable: true }"
   >
-    <swiper-slide v-for="(testimonial, index) in testimonials " :key="index"> 
+    <swiper-slide v-for="(testimonial, index) in testimonials" :key="index">
       <div class="testimonial">
-        <img :src="store.getPathImage(testimonial.image, 'jpg')" :alt="testimonial.name" />
+        <img
+          :src="getPathImage(testimonial.image, 'jpg')"
+          :alt="testimonial.name"
+        />
         <div class="text-area">
-          <p>{{testimonial.opinion}}</p>
-          <span class="name">{{testimonial.name}},</span>
-          <span class="job">{{testimonial.job}}</span>
+          <p>{{ testimonial.opinion }}</p>
+          <span class="name">{{ testimonial.name }},</span>
+          <span class="job">{{ testimonial.job }}</span>
         </div>
       </div>
     </swiper-slide>
@@ -62,7 +62,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 .testimonial {
   width: 60%;
   margin: 0 auto 3rem;
@@ -94,4 +93,3 @@ img {
   }
 }
 </style>
-
