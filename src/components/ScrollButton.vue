@@ -1,40 +1,55 @@
 <script>
 export default {
-  name: 'ScrollButton',
+  name: "ScrollButton",
   data() {
     return {
-      showScrollToTop: false
-    }
+      showScrollToTop: false,
+    };
   },
-  created () {
-    window.addEventListener('scroll', this.handleScroll);
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
   },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll);
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
-    handleScroll (event) {
+    handleScroll(event) {
       const rootElement = document.documentElement;
-      if ((rootElement.scrollTop > rootElement.clientHeight )) {
+      if (rootElement.scrollTop > rootElement.clientHeight) {
         this.showScrollToTop = true;
       } else {
         this.showScrollToTop = false;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <template>
-  <div v-if="showScrollToTop" class="scroll-button d-flex justify-content-center align-items-center">
-    <a href="#header">
-      <i class="fa-solid fa-chevron-up icon-chevron"></i>
-    </a>
-  </div>
-
+  <transition name="fade">
+    <div
+      v-if="showScrollToTop"
+      :class="{ fadein: showScrollToTop }"
+      class="scroll-button d-flex justify-content-center align-items-center"
+    >
+      <a href="#header">
+        <i class="fa-solid fa-chevron-up icon-chevron"></i>
+      </a>
+    </div>
+  </transition>
 </template>
 
 <style lang="scss" scoped>
-@use '../styles/partials/variables' as *;
+@use "../styles/partials/variables" as *;
+
+.fade-enter-active,
+.fase-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 
 .scroll-button {
   position: fixed;
@@ -53,6 +68,9 @@ export default {
   .icon-chevron {
     color: white;
   }
-}
 
+  .fadein {
+    transition: all 3s;
+  }
+}
 </style>
