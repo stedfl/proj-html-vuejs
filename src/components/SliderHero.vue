@@ -18,12 +18,12 @@ export default {
   setup() {
     return {
       modules: [Navigation, Pagination, Autoplay, EffectCreative],
-      getPathImage
+      getPathImage,
     };
   },
   data() {
     return {
-      hero
+      hero,
     };
   },
 };
@@ -53,24 +53,26 @@ export default {
   >
     <swiper-slide v-for="(item, index) in hero" :key="index">
       <div :class="item.background" class="main-wrap">
-        <div class="container-seo h-100 pt-4 d-flex">
-          <div class="hero d-flex align-items-center">
-            <div class="content w-100">
-              <h1>{{ item.title }}</h1>
-              <p class="p1">{{item.text }}</p>
-              <div class="buttons">
-                <button class="btn-seo default">buy avada now</button>
-                <button class="btn-seo contact">contact us</button>
+        <div class="pattern">
+          <div class="circles">
+            <div class="container-seo h-100 pt-4 d-flex">
+              <div class="hero d-flex align-items-center">
+                <div class="content w-100">
+                  <h1>{{ item.title }}</h1>
+                  <p class="p1">{{ item.text }}</p>
+                  <div class="buttons">
+                    <button class="btn-seo default">buy avada now</button>
+                    <button class="btn-seo contact">contact us</button>
+                  </div>
+                </div>
+              </div>
+              <div class="img-container d-flex align-items-center">
+                <img :src="getPathImage(item.image, 'png')" :alt="item.image" />
               </div>
             </div>
           </div>
-          <div class="img-container d-flex align-items-center">
-            <img :src="getPathImage(item.image, 'png')" :alt="item.image">
-          </div>
         </div>
       </div>
-
-      
     </swiper-slide>
   </swiper>
 </template>
@@ -78,9 +80,32 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
 .main-wrap {
+  position: relative;
   height: 870px;
   width: 100%;
   background-image: url(../assets/img/pattern_background.png);
+}
+
+.pattern,
+.circles {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+
+}
+
+.pattern {
+  background-image: url(../assets/img/pattern_background.png);
+}
+
+.circles {
+  // background-image: url(../assets/img/lines-1.png);
+  background-image: url(../assets/img/lines-1.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 
 .main-wrap.hero-1 {
