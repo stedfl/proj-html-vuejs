@@ -1,6 +1,5 @@
 <script>
 import { getPathImage } from "../data/functions";
-import { hero } from "../data/main-components";
 import { Navigation, Pagination, Autoplay, EffectCreative } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
@@ -10,22 +9,19 @@ import "swiper/css/effect-creative";
 
 export default {
   name: "SliderHero",
+  props: {
+    hero: Array
+  },
   components: {
     Swiper,
     SwiperSlide,
   },
-  props: {},
   setup() {
     return {
       modules: [Navigation, Pagination, Autoplay, EffectCreative],
       getPathImage,
     };
-  },
-  data() {
-    return {
-      hero,
-    };
-  },
+  }
 };
 </script>
 
@@ -86,28 +82,6 @@ export default {
   background-image: url(../assets/img/pattern_background.png);
 }
 
-.pattern,
-.circles {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-
-}
-
-.pattern {
-  background-image: url(../assets/img/pattern_background.png);
-}
-
-.circles {
-  // background-image: url(../assets/img/lines-1.png);
-  background-image: url(../assets/img/lines-1.png);
-  background-repeat: no-repeat;
-  background-position-x: center;
-}
-
 .main-wrap.hero-1 {
   background-image: linear-gradient(to bottom right, #321b5b, #833459, #fe9c48);
 }
@@ -118,6 +92,25 @@ export default {
 
 .main-wrap.hero-3 {
   background-image: linear-gradient(to bottom right, #090e7c, #9f39fc);
+}
+
+.pattern,
+.circles {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pattern {
+  background-image: url(../assets/img/pattern_background.png);
+}
+
+.circles {
+  background-image: url(../assets/img/lines-1.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 
 .hero {
@@ -135,6 +128,7 @@ export default {
     }
   }
 }
+
 p {
   padding-right: 4rem;
   margin: 1.5rem 0;

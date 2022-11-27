@@ -112,13 +112,16 @@ p.p2 {
   margin-bottom: 2rem;
 }
 
-.swiper-pagination-bullet-active {
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: black;
 }
 
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
+  border: 1px solid black;
+  background-color: white;
+  opacity: 1;
 }
 
 .swiper-button-prev,

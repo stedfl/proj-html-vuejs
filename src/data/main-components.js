@@ -17,8 +17,6 @@ const hero = [
     image: 'best-seo-services-slide-1',
     background: 'hero-3'
   },
-
-
 ]; 
 
 const features = {

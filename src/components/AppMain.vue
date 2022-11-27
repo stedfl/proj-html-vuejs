@@ -7,7 +7,7 @@ import PlansSection from './PlansSection.vue';
 import NewsSection from './NewsSection.vue';
 import ClientsSection from './ClientsSection.vue';
 import CallToActionSection from './CallToActionSection.vue';
-import {features, services, ourWork, plans, news, clients, callToAction} from '../data/main-components';
+import {hero, features, services, ourWork, plans, news, clients, callToAction} from '../data/main-components';
 export default {
   name: 'AppMain',
   components: {
@@ -22,6 +22,7 @@ export default {
   },
   data() {
     return {
+      hero,
       features,
       services,
       ourWork,
@@ -36,7 +37,7 @@ export default {
 </script>
 <template>
   <main>
-    <SliderHero />
+    <SliderHero :hero="hero" />
     <section class="features">
       <FeatureSection :section="features" />
     </section>
@@ -59,7 +60,6 @@ export default {
       <CallToActionSection :section="callToAction" />
     </section>
   </main>
-  
 </template>
 
 
