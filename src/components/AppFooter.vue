@@ -10,7 +10,8 @@ export default {
     return {
       menu,
       credits,
-      social
+      social,
+      isSocial: null
     };
   },
   computed: {
@@ -49,7 +50,10 @@ export default {
       <div class="social">
         <ul class="d-flex">
           <li v-for="(item, index) in social" :key="index">
-            <a :href="item.link">
+            <div v-if="isSocial === index" class="social-name">
+              {{item.placeholder}}
+            </div>
+            <a @mouseenter="isSocial=index" @mouseleave="isSocial=null" :href="item.link">
               <i :class="item.icon" class="fa-brands icon-social"></i>
             </a>
           </li>
@@ -61,6 +65,8 @@ export default {
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
+
+
 
 footer {
   background-color: $primary-bg;
@@ -101,10 +107,26 @@ a {
 
 .social ul {
   margin-top: 1.2rem;
+  li {
+    position: relative;
+  }
   a:hover {
     color: $grey-color
   }
 }
+
+.social-name {
+  font-size: 0.7rem;
+  color: white;
+  text-transform: capitalize;
+  background-color: black;
+  border-radius: 8px;
+  padding: 5px;
+  position: absolute;
+  z-index: 995;
+  bottom: 100%;
+}
+
 .icon-copyright {
   margin-right: 0.3rem;
 }

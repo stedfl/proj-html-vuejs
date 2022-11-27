@@ -81,7 +81,7 @@ const social = [
   },
   {
     icon: 'fa-youtube',
-    placeholder: 'YouTube',
+    placeholder: 'youTube',
     link: '#'
   }
 ] 
