@@ -15,7 +15,7 @@ export default {
   methods: {
     handleScroll(event) {
       const rootElement = document.documentElement;
-      if (rootElement.scrollTop > rootElement.clientHeight) {
+      if (rootElement.scrollTop > (rootElement.clientHeight / 2)) {
         this.showScrollToTop = true;
       } else {
         this.showScrollToTop = false;

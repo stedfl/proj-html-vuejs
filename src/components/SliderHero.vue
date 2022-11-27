@@ -32,6 +32,7 @@ export default {
   <swiper
     :modules="modules"
     :slides-per-view="1"
+    :speed="1500"
     :autoplay="{
       delay: 6000,
       disableOnInteraction: false,
