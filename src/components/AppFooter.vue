@@ -25,7 +25,7 @@ export default {
         <img src="/logo/logo_seo_1x.png" alt="logo" />
       </a>
       <Navbar :menu="menu" :isHeaderMenu="false" />
-      <ul class="d-flex credits flex-wrap">
+      <ul class="d-flex credits flex-wrap justify-content-center">
         <li
           v-for="(item, index) in credits.info"
           :key="index"
@@ -121,7 +121,7 @@ a {
   border-radius: 8px;
   padding: 5px;
   position: absolute;
-  z-index: 995;
+  z-index: 996;
   bottom: 100%;
 }
 

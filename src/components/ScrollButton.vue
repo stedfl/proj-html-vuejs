@@ -59,7 +59,7 @@ export default {
   bottom: 0;
   right: 60px;
   background-color: #343b44;
-  z-index: 999;
+  z-index: 998;
   cursor: pointer;
   transition: all 0.5s;
   &:hover {

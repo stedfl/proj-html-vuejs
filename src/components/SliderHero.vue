@@ -66,7 +66,7 @@ export default {
                   </div>
                 </div>
               </div>
-              <div class="d-flex align-items-center">
+              <div class="hero-image d-flex align-items-center">
                 <img :src="getPathImage(item.image, 'png')" :alt="item.image" />
               </div>
             </div>
@@ -133,8 +133,44 @@ export default {
   }
 }
 
+.hero-image {
+  width: 50%;
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
 p {
   padding-right: 4rem;
   margin: 1.5rem 0;
+}
+
+@media all and (max-width: 1100px) {
+  .hero {
+    padding-right: 0;
+    padding-left: 40px;
+  }
+}
+
+@media all and (max-width: 780px) {
+  .hero {
+    width: 60%
+  }
+  .hero-image {
+    width: 40%; 
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  .p1 {
+    font-size: 1rem;
+    padding-right: 0;
+  }
+
+  .btn-seo.contact {
+    margin-top: 1rem;
+  }
 }
 </style>

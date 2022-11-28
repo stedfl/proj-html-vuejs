@@ -1,20 +1,22 @@
 <script>
+import {store} from "../data/store";
 export default {
-  name: "NavBar",
+  name: "NavBarHamburger",
   props: {
     menu: Array,
-    isHeaderMenu: Boolean,
+    isHeaderMenu: Boolean
   },
   data() {
     return {
-      isAllOthers: true
+      isAllOthers: true,
+      store
     }
   }
 };
 </script>
 <template>
-  <nav class="align-items-center">
-    <ul class="seo d-flex  flex-md-row align-items-center" :class="{'flex-column' : !isHeaderMenu }">
+  <nav v-if="store.isHamburgerMenu">
+    <ul class="seo d-flex flex-column align-items-center justify-content-center">
       <li v-for="(item, index) in menu" :key="index">
         <a
           v-if="
@@ -38,12 +40,23 @@ export default {
 @use "../styles/partials/variables" as *;
 
 nav {
-  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  z-index: 997;
+  background-color: white;
+  ul {
+    margin-bottom: 0;
+    height: 100%;
+    width: 100%;
+  }
+  li {
+    padding: 1rem 0;
+  }
 }
 
 .seo {
-  height: 100%;
-  margin: 0;
+  width: 100%;
 }
 
 a {
@@ -57,13 +70,8 @@ a {
 }
 
 header a {
-  color: white;
-}
-
-footer a {
   color: black;
 }
-
 
 .apply {
   color: $primary-color;
@@ -72,22 +80,9 @@ footer a {
   text-transform: uppercase;
   border-radius: 5px;
   font-size: 0.7rem;
-  margin-left: 10px;
-}
-
-
-.others {
-  margin-left: 2rem;
 }
 
 .active {
   color: $primary-color;
 }
-
-@media all and (max-width: 1100px) {
-  nav {
-    display: none;
-  }
-}
-
 </style>

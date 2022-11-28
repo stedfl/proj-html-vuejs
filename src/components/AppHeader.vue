@@ -1,14 +1,18 @@
 <script>
 import Navbar from "./NavBar.vue";
+import NavBarHamburger from "./NavBarHamburger.vue";
+import {store} from "../data/store";
 import { menu } from "../data/menu";
 export default {
   name: "AppHeader",
   components: {
     Navbar,
+    NavBarHamburger
   },
   data() {
     return {
       menu,
+      store,
     };
   },
 };
@@ -28,7 +32,13 @@ export default {
         <Navbar :menu="menu" :isHeaderMenu="true" />
         <button class="btn-seo default">get in touch now</button>
       </div>
+      <div @click="store.isHamburgerMenu=!store.isHamburgerMenu" class="hamburger">
+          <i v-if="!store.isHamburgerMenu" class="fa-solid fa-bars"></i>
+          <i v-else class="fa-solid fa-xmark"></i>
+      </div>
+      <NavBarHamburger :menu="menu" :isHeaderMenu="true" />
     </header>
+    
   </div>
     
 </template>
@@ -51,6 +61,22 @@ header {
     margin-right: 5rem;
     padding: 0.5rem 1.5rem;
     border-radius: 20px;
+  }
+}
+
+.hamburger {
+  display: none;
+  height: 100%;
+  width: 40px;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+@media all and (max-width: 1100px) {
+  .hamburger {
+    display: block;
   }
 }
 </style>
