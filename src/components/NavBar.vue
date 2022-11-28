@@ -14,7 +14,7 @@ export default {
 </script>
 <template>
   <nav class="d-flex align-items-center">
-    <ul class="seo d-flex align-items-center">
+    <ul class="seo d-flex  flex-md-row align-items-center" :class="{'flex-column' : !isHeaderMenu }">
       <li v-for="(item, index) in menu" :key="index">
         <a
           v-if="

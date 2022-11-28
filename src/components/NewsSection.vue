@@ -20,9 +20,9 @@ export default {
   <div class="main-wrap short">
     <div class="container-seo text-center">
       <TitleArea :title="section.title" :text="section.text" :textColor="'black'" />
-      <div class="row row-cols-3">
+      <div class="row row-cols-1 row-cols-md-3">
         <div v-for="(card, index) in section.cards" :key="index" class="col">
-          <div class="card text-center">
+          <div class="card text-center mb-5 mb-md-0">
             <div class="image-container">
               <img :src="getPathImage(card.image, 'jpg')" :alt="card" />
             </div>

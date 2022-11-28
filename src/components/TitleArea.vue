@@ -27,4 +27,13 @@ export default {
     margin-bottom: 1rem;
   }
 }
+
+
+@media all and (max-width: 1524px ) {
+  .title-section {
+    width: 100%;
+    padding: 5rem 0 3rem;
+  }
+}
+
 </style>

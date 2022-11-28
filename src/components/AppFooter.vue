@@ -25,7 +25,7 @@ export default {
         <img src="/logo/logo_seo_1x.png" alt="logo" />
       </a>
       <Navbar :menu="menu" :isHeaderMenu="false" />
-      <ul class="d-flex credits">
+      <ul class="d-flex credits flex-wrap">
         <li
           v-for="(item, index) in credits.info"
           :key="index"

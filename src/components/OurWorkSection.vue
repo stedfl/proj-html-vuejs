@@ -25,7 +25,7 @@ export default {
         :text="section.text"
         :textColor="'black'"
       />
-      <div class="row row-cols-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
         <div v-for="(card, index) in section.cards" :key="index" class="col">
           <div
             @mouseenter="showLink = index"

@@ -18,9 +18,9 @@ export default {
         :text="section.text"
         :textColor="'white'"
       />
-      <div class="row">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
         <div v-for="(card, index) in section.cards" :key="index" class="col">
-          <div class="card text-center rounded-0">
+          <div class="card text-center rounded-0  mb-5 mb-md-0">
             <div class="type">
               <h3>{{ card.type }}</h3>
             </div>

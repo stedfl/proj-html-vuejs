@@ -20,9 +20,9 @@ export default {
   <div class="main-wrap">
     <div class="container-seo">
       <TitleArea :title="section.title" :text="section.text" :textColor="'black'"/>
-      <div class="row">
+      <div class="row row-cols-1 row-cols-md-3">
         <div v-for="(card, index) in section.cards" :key="index" class="col">
-          <div  class="card text-center">
+          <div  class="card text-center mb-5 mb-md-0">
             <div class="top">
               <a href="#">
                 <i class="fa-solid icon" :class="card.icon"></i>
@@ -56,5 +56,6 @@ h3:hover {
 
 img {
   margin-top: 2rem;
+  width: 100%;
 }
 </style>

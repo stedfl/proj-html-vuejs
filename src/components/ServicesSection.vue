@@ -18,9 +18,9 @@ export default {
         :text="section.text"
         :textColor="'white'"
       />
-      <div class="row">
+      <div class="row row-cols-1 row-cols-md-4">
         <div v-for="(card, index) in section.cards" :key="index" class="col">
-          <div class="card text-center">
+          <div class="card text-center mb-5 mb-md-0">
             <div class="top">
               <a
                 href="
