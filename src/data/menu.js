@@ -1,31 +1,38 @@
 const menu = [
   {
     placeholder: 'home',
-    link: '#'
+    link: '#',
+    current: true
   },
   {
     placeholder: 'Who we are',
-    link: '#'
+    link: '#',
+    current: false
   },
   {
     placeholder: 'What we do',
-    link: '#'
+    link: '#',
+    current: false
   },
   {
     placeholder: 'Careers',
-    link: '#'
+    link: '#',
+    current: false
   },
   {
     placeholder: 'apply',
-    link: '#'
+    link: '#',
+    current: false
   },
   {
     placeholder: 'news',
-    link: '#'
+    link: '#',
+    current: false
   },
   {
     placeholder: 'get in touch',
-    link: '#'
+    link: '#',
+    current: false
   }
 ];
 

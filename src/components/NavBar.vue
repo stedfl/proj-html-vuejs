@@ -9,7 +9,6 @@ export default {
     return {
       isAllOthers: true
     }
-    
   }
 };
 </script>
@@ -25,7 +24,7 @@ export default {
               item.placeholder !== 'get in touch') ||
             (!isHeaderMenu && item.placeholder === 'get in touch')
           "
-          :class="[item.placeholder === 'apply' ? 'apply' : 'others']"
+          :class="[(item.placeholder === 'apply' ? 'apply' : 'others'), item.current ? 'active' : '']"
           class="menu-items text"
           :href="item.link"
           >{{ item.placeholder }}
@@ -75,5 +74,9 @@ footer a {
 
 .others {
   margin-left: 2rem;
+}
+
+.active {
+  color: $primary-color;
 }
 </style>

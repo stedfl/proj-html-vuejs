@@ -170,7 +170,7 @@ const plans = {
 };
 
 const news = {
-  title: 'latest news',
+  title: 'our news',
   text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
   cards: [
     {
