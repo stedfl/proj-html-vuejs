@@ -11,19 +11,8 @@ export default {
       menu,
       credits,
       social,
-      isSocial: null
+      socialIndex: null,
     };
-  },
-  computed: {
-    isBorder() {
-      let index;
-      if (
-        credits.info[index] === "0" ||
-        credits.info[index] === credits.info.lenght - 1
-      ) {
-        return true;
-      }
-    },
   },
 };
 </script>
@@ -31,16 +20,16 @@ export default {
   <footer>
     <div
       class="container-seo text-center d-flex align-items-center justify-content-center"
-    >
-      <img src="/logo/logo_seo_1x.png" alt="logo" />
-      <Navbar :menu="menu" :isApply="false" :isAllOthers="true" />
+    > 
+      <a href="#">
+        <img src="/logo/logo_seo_1x.png" alt="logo" />
+      </a>
+      <Navbar :menu="menu" :isHeaderMenu="false" />
       <ul class="d-flex credits">
         <li
           v-for="(item, index) in credits.info"
           :key="index"
-          :class="{
-            'border-item': isBorder,
-          }"
+          :class="[(index === 0) || (index === (credits.info.length - 1)) ? 'no-border' : 'border-item']"
         >
           <i :class="item.icon" class="fa-regular icon-copyright"></i>
           <span>{{ item.text }}</span>
@@ -50,10 +39,14 @@ export default {
       <div class="social">
         <ul class="d-flex">
           <li v-for="(item, index) in social" :key="index">
-            <div v-if="isSocial === index" class="social-name">
-              {{item.placeholder}}
+            <div v-if="socialIndex === index" class="social-name">
+              {{ item.placeholder }}
             </div>
-            <a @mouseenter="isSocial=index" @mouseleave="isSocial=null" :href="item.link">
+            <a
+              @mouseenter="socialIndex = index"
+              @mouseleave="socialIndex = null"
+              :href="item.link"
+            >
               <i :class="item.icon" class="fa-brands icon-social"></i>
             </a>
           </li>
@@ -65,8 +58,6 @@ export default {
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
-
-
 
 footer {
   background-color: $primary-bg;
@@ -82,36 +73,43 @@ footer {
 ul.credits {
   margin-top: 2.8rem;
   li {
-  padding: 0 0.5rem;
-  border-right: 1px solid $grey-color;
-  border-left: 1px solid $grey-color;
-  text-transform: capitalize;
-  font-size: 0.8rem;
-  margin-right: -1px;
-  color: $grey-color;
+    padding: 0 0.5rem;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    margin-right: -1px;
+    color: $grey-color;
   }
   a:hover {
     color: $primary-color;
   }
-  
+  .icon-copyright {
+    margin-right: 0.3rem;
+  }
 }
 
 a {
-    color: black;
-  }
+  color: black;
+}
 
-.border-item {
+.no-border {
   border-left: 0;
   border-right: 0;
+}
+
+.border-item {
+  border-right: 1px solid $grey-color;
+  border-left: 1px solid $grey-color;
 }
 
 .social ul {
   margin-top: 1.2rem;
   li {
     position: relative;
+    display: flex;
+    justify-content: center;
   }
   a:hover {
-    color: $grey-color
+    color: $grey-color;
   }
 }
 
@@ -127,26 +125,8 @@ a {
   bottom: 100%;
 }
 
-.icon-copyright {
-  margin-right: 0.3rem;
-}
-
 .icon-social {
   margin: 0 0.7rem;
   font-size: 1.2rem;
 }
-
-.box2 {
-  width: 300px;
-  margin: 50px auto;
-  border: 4px solid #00bfb6;
-  padding: 20px;
-  text-align: center;
-  font-weight: 900;
-  color: #00bfb6;
-  font-family: arial;
-  position: relative;
-}
-
-
 </style>

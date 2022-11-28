@@ -4,7 +4,6 @@
 
 body {
   font-family: sans-serif;
-  position: relative;
 }
 
 ul {
@@ -12,6 +11,7 @@ ul {
   padding-left: 0;
 }
 
+// FONT SIZE AND TEXT STYLE/DECORATION
 h1,
 h2,
 h3,
@@ -43,7 +43,6 @@ h4, h5 {
   font-size: 1.5rem;
 }
 
-
 a {
   text-decoration: none;
 }
@@ -60,6 +59,7 @@ p.p2 {
   font-size: 1.1rem;
 }
 
+// CONTAINERS
 .container-seo {
   width: 65%;
   margin: 0 auto;
@@ -77,6 +77,11 @@ p.p2 {
   padding-bottom: 11.2rem;
 }
 
+.row {
+  padding-top: 1rem;
+}
+
+// BUTTONS
 .btn-seo {
   padding: 0.7rem 2.4rem;
   border-radius: 30px;
@@ -94,6 +99,7 @@ p.p2 {
   }
 }
 
+// TITLES COLORS
 .text.white {
   color: white;
 }
@@ -102,16 +108,16 @@ p.p2 {
   color: black;
 }
 
-.row {
-  padding-top: 1rem;
-}
 
 .icon {
   color: $primary-color;
   font-size: 2rem;
   margin-bottom: 2rem;
+  &:hover {
+    color: lighten($primary-color, 5%);
+  }
 }
-
+// SWIPER PAGINATION
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: black;
 }
@@ -124,6 +130,7 @@ p.p2 {
   opacity: 1;
 }
 
+// SWIPER NAVIGATION
 .swiper-button-prev,
 .swiper-button-next {
   background-color: rgba(0, 0, 0, 0.4);
@@ -152,16 +159,17 @@ p.p2 {
 }
 
 
+// MEDIA QUEARIES
 @media all and (max-width: 1524px ) {
   .container-seo {
     width: 80%;
   }
+}
 
-  @media all and (max-width: 1200px) {
-    .container-seo {
-      width: 80%;
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
+@media all and (max-width: 1200px) {
+  .container-seo {
+    width: 80%;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }

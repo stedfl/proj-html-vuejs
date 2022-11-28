@@ -112,7 +112,10 @@ const plans = {
     cards: [
       {
         type: 'standard',
-        price: '19',
+        price: {
+          integer: 19,
+          cents: 99
+        },
         frequency: 'monthly',
         info: [
           '5 projects', 
@@ -123,7 +126,10 @@ const plans = {
       },
       {
         type: 'premium',
-        price: '29',
+        price: {
+          integer: 29,
+          cents: 99
+        },
         frequency: 'monthly',
         info: [
           '10 projects', 
@@ -134,7 +140,10 @@ const plans = {
       },
       {
         type: 'professional',
-        price: '39',
+        price: {
+          integer: 39,
+          cents: 99
+        },
         frequency: 'monthly',
         info: [
           '15 projects', 
@@ -145,7 +154,10 @@ const plans = {
       },
       {
         type: 'extreme',
-        price: '59',
+        price: {
+          integer: 59,
+          cents: 99
+        },
         frequency: 'monthly',
         info: [
           'unlimited projects', 

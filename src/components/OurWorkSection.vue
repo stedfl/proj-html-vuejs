@@ -100,5 +100,8 @@ img {
 .icon {
   color: white;
   font-size: 2rem;
+  &:hover {
+    color: white;
+  }
 }
 </style>

@@ -24,7 +24,9 @@ export default {
         <div v-for="(card, index) in section.cards" :key="index" class="col">
           <div  class="card text-center">
             <div class="top">
-              <i class="fa-solid icon" :class="card.icon"></i>
+              <a href="#">
+                <i class="fa-solid icon" :class="card.icon"></i>
+              </a>
               <h3>{{card.title}}</h3>
             </div>
             <p>{{card.text}}</p>
@@ -48,8 +50,11 @@ export default {
   padding: 35px;
 }
 
+h3:hover {
+  color: $primary-color;
+}
+
 img {
   margin-top: 2rem;
 }
-
 </style>

@@ -29,8 +29,8 @@ export default {
                 <span class="currency">
                 <i class="fa-solid fa-dollar-sign icon-dollar"></i>
                 </span>
-                <span class="integer">{{ card.price }}</span>
-                <span class="cents">99</span>
+                <span class="integer">{{ card.price.integer }}</span>
+                <span class="cents">{{ card.price.cents }}</span>
                 <span class="frequency">{{ card.frequency }}</span>
               </div>
             </div>

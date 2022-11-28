@@ -1,11 +1,9 @@
 <script>
 import { getPathImage } from "../data/functions";
-import { EffectFade, Navigation, Pagination, Autoplay } from "swiper";
+import { EffectFade, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 
 export default {
@@ -19,7 +17,7 @@ export default {
   },
   setup() {
     return {
-      modules: [EffectFade, Navigation, Pagination, Autoplay],
+      modules: [EffectFade, Pagination, Autoplay],
     };
   },
   data() {

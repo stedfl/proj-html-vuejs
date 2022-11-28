@@ -16,7 +16,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../styles/partials/variables' as *;
 
 .title-section {
   text-align: center;

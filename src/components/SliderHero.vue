@@ -1,6 +1,6 @@
 <script>
 import { getPathImage } from "../data/functions";
-import { Navigation, Pagination, Autoplay, EffectCreative } from "swiper";
+import { Navigation, Autoplay, EffectCreative } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -18,9 +18,13 @@ export default {
   },
   setup() {
     return {
-      modules: [Navigation, Pagination, Autoplay, EffectCreative],
-      getPathImage,
+      modules: [Navigation, Autoplay, EffectCreative],
     };
+  },
+  data() {
+    return {
+      getPathImage
+    }
   }
 };
 </script>
@@ -62,7 +66,7 @@ export default {
                   </div>
                 </div>
               </div>
-              <div class="img-container d-flex align-items-center">
+              <div class="d-flex align-items-center">
                 <img :src="getPathImage(item.image, 'png')" :alt="item.image" />
               </div>
             </div>
@@ -96,9 +100,9 @@ export default {
 
 .pattern,
 .circles {
+  position: absolute;
   height: 100%;
   width: 100%;
-  position: absolute;
   top: 0;
   left: 0;
 }
@@ -132,13 +136,5 @@ export default {
 p {
   padding-right: 4rem;
   margin: 1.5rem 0;
-}
-
-.image-container {
-  width: 50%;
-  img {
-    width: 60%;
-    object-fit: cover;
-  }
 }
 </style>

@@ -22,7 +22,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../styles/partials/variables' as *;
 
 .main-wrap {
   background-image: url(../assets/img/CTA-seo-1.jpg);
@@ -31,12 +30,12 @@ export default {
 }
 .filter {
   flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0, 0.5);
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.5);
 }
 
 .title-section.special {

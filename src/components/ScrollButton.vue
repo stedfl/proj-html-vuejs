@@ -28,7 +28,6 @@ export default {
   <transition name="fade">
     <div
       v-if="showScrollToTop"
-      :class="{ fadein: showScrollToTop }"
       class="scroll-button d-flex justify-content-center align-items-center"
     >
       <a href="#header">
@@ -61,16 +60,13 @@ export default {
   right: 60px;
   background-color: #343b44;
   z-index: 999;
+  cursor: pointer;
   transition: all 0.5s;
   &:hover {
     background-color: $primary-color;
   }
   .icon-chevron {
     color: white;
-  }
-
-  .fadein {
-    transition: all 3s;
   }
 }
 </style>

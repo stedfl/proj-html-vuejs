@@ -20,10 +20,12 @@ export default {
       class="d-flex justify-content-between align-items-center"
     >
       <div class="logo">
-        <img src="/logo/logo_seo_w_1x.png" alt="logo" />
+        <a href="#">
+          <img src="/logo/logo_seo_w_1x.png" alt="logo" />
+        </a>
       </div>
       <div class="right d-flex">
-        <Navbar :menu="menu" :isApply="true" :isAllOthers="true" />
+        <Navbar :menu="menu" :isHeaderMenu="true" />
         <button class="btn-seo default">get in touch now</button>
       </div>
     </header>
@@ -32,7 +34,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../styles/partials/variables" as *;
 
 .container-seo {
   position: relative;

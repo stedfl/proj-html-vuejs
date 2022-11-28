@@ -1,10 +1,9 @@
 <script>
 import { getPathImage } from "../data/functions";
-import { Navigation, Pagination, Autoplay } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/autoplay";
+import "swiper/css/pagination";
 
 export default {
   name: "SliderPartners",
@@ -17,7 +16,7 @@ export default {
   },
   setup() {
     return {
-      modules: [Navigation, Pagination, Autoplay],
+      modules: [Pagination, Autoplay],
     };
   },
   data() {

@@ -36,10 +36,6 @@ export default {
   padding-bottom: 0;
 }
 
-.title-section {
-  padding-bottom: 3.1rem;
-}
-
 .row.testimonials {
   padding-top: 0;
   text-align: center;
@@ -50,10 +46,5 @@ export default {
   padding: 4rem 0 5.5rem ;
   border-top: 1px solid darken($primary-bg, 5%);
   margin-top: 4rem;
-}
-
-.btn-container {
-  border-bottom: 1px solid darken($primary-bg, 5%);
-  padding-bottom: 4.3rem;
 }
 </style>
