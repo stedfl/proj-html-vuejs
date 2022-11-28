@@ -16,7 +16,7 @@ export default {
 </script>
 <template>
   <nav v-if="store.isHamburgerMenu">
-    <ul class="seo d-flex flex-column align-items-center justify-content-center">
+    <ul class="seo d-flex flex-column justify-content-center">
       <li v-for="(item, index) in menu" :key="index">
         <a
           v-if="
@@ -50,8 +50,13 @@ nav {
     height: 100%;
     width: 100%;
   }
-  li {
+  li:not(:last-child) {
+    width: 100%;
     padding: 1rem 0;
+    text-align: center;
+    &:hover {
+      background-color: $primary-bg;
+    }
   }
 }
 

@@ -85,7 +85,7 @@ footer a {
 }
 
 @media all and (max-width: 1100px) {
-  nav {
+  header nav {
     display: none;
   }
 }
